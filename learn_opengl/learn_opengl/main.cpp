@@ -10,16 +10,20 @@
 #include "lesson_01.hpp"
 
 int main(void) {
+    int number;
+    bool quit = false;
     
-    int number = 0;
-    std::cout << "Enter lesson number: ";
-    std::cin >> number;
-    
-    switch (number) {
-        case 1:
-            lenson_01_entry();
-            break;
-        default:
-            break;
+    while (!quit) {
+        std::cout << "Enter lesson number [1-1]:, quit with 0";
+        std::cin >> number;
+        switch (number) {
+            case 0:
+                quit = true;
+                break;
+            case 1:
+                lenson_01_entry();
+                break;
+        }
     }
+
 }
