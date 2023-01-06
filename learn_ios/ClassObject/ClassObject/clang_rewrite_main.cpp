@@ -106,9 +106,9 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_81a15e_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"\nmain [cat class] %@ cat_class\n",31};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_81a15e_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"==",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_81a15e_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"!=",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_2db706_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"\nmain [cat class] %@ cat_class\n",31};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_2db706_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"==",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_2db706_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"!=",2};
 typedef signed char __int8_t;
 typedef unsigned char __uint8_t;
 typedef short __int16_t;
@@ -62948,16 +62948,29 @@ void printSuperClass(Class cls){
     }
     printf(" => nil \n");
 }
+void printIsaRelation(id obj) {
+    Class cls = object_getClass(obj);
+    printf("isa: %s := %s%s", ((const char * _Nullable (*)(id, SEL))(void *)objc_msgSend)((id)((NSString *(*)(id, SEL))(void *)objc_msgSend)((id)obj, sel_registerName("description")), sel_registerName("UTF8String")), class_getName(cls), class_isMetaClass(cls) ? "[meta]": "");
+    while (object_getClass(cls)) {
+        if (cls == object_getClass(cls)) {
+            break;
+        }
+        cls = object_getClass(cls);
+        printf(" := %s%s", class_getName(cls), class_isMetaClass(cls)? "[meta]": "");
+    }
+    printf(" := %s%s := ...\n", class_getName(cls), class_isMetaClass(cls)? "[meta]": "");
+}
 int main(int argc, const char * argv[]) {
     /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
-        PrisonCat *cat = ((PrisonCat *(*)(id, SEL))(void *)objc_msgSend)((id)((PrisonCat *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("PrisonCat"), sel_registerName("alloc")), sel_registerName("init"));
-        Class cat_class = objc_getClass("PrisonCat");
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_81a15e_mi_0, (((Class (*)(id, SEL))(void *)objc_msgSend)((id)cat, sel_registerName("class")) == cat_class ? (NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_81a15e_mi_1 : (NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_81a15e_mi_2));
-        ((void (*)(id, SEL))(void *)objc_msgSend)((id)cat, sel_registerName("fullySick"));
-        ((void (*)(id, SEL))(void *)objc_msgSend)((id)((Class (*)(id, SEL))(void *)objc_msgSend)((id)cat, sel_registerName("class")), sel_registerName("fullySick"));
-        Class cls = objc_getClass("PrisonCat");
-        Class meta_cls = objc_getMetaClass("PrisonCat");
+        PrisonCat *kitty = ((PrisonCat *(*)(id, SEL))(void *)objc_msgSend)((id)((PrisonCat *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("PrisonCat"), sel_registerName("alloc")), sel_registerName("init"));
+        Class cat_class = object_getClass(kitty);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_2db706_mi_0, (((Class (*)(id, SEL))(void *)objc_msgSend)((id)kitty, sel_registerName("class")) == cat_class ? (NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_2db706_mi_1 : (NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_2db706_mi_2));
+        ((void (*)(id, SEL))(void *)objc_msgSend)((id)kitty, sel_registerName("fullySick"));
+        ((void (*)(id, SEL))(void *)objc_msgSend)((id)((Class (*)(id, SEL))(void *)objc_msgSend)((id)kitty, sel_registerName("class")), sel_registerName("fullySick"));
+        printIsaRelation(kitty);
+        Class cls = object_getClass(kitty);
         printSuperClass(cls);
+        Class meta_cls = object_getClass(cls);
         printSuperClass(meta_cls);
     }
     return 0;
