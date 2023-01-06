@@ -42,8 +42,8 @@ int main(int argc, const char * argv[]) {
         Class cat_class = object_getClass(kitty);
         NSLog(@"\nmain [cat class] %@ cat_class\n", ([kitty class] == cat_class ? @"==" : @"!="));
         
-        [kitty fullySick];
-        [[kitty class] fullySick];
+        [kitty meow];
+        [[kitty class] meow];
         
         printIsaRelation(kitty);
         

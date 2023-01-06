@@ -21,8 +21,8 @@ extern void _objc_autoreleasePoolPrint(void); //这是个私有API, 作用是打
 @property(nonatomic, copy) NSString *name;
 @property(atomic, assign) BOOL isSick;
 
-- (void)fullySick;
-+ (void)fullySick;
+- (void)meow;
++ (void)meow;
 @end
 
 @interface PrisonCat(Mogoal)

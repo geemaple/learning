@@ -23,11 +23,16 @@
     return self;
 }
 
-- (void)fullySick{
-    printf("nice job\n");
+- (void)meow{
+    printf("instance meow\n");
 }
-+ (void)fullySick{
-    printf("fully sick bro\n");
+
+- (NSString *)description {
+    return @"Kitty";
+}
+
++ (void)meow{
+    printf("class meow\n");
 }
 
 @end
