@@ -51,10 +51,9 @@ GLFWwindow * createGraphicWindow(const char *title, int width, int height) {
         std::cout << "Failed to initialize GLAD" << std::endl;
     }
     
-    int scaleWidth, scaleHeight;
-    glfwGetFramebufferSize(window, &scaleWidth, &scaleHeight);
+    glfwGetFramebufferSize(window, &width, &height);
     // pixels view port will transform (-1 to 1) to (0, 800) and (0, 600)
-    glViewport(0, 0, scaleWidth, scaleWidth);
+    glViewport(0, 0, width, height);
     // We register the callback functions after we've created the window and before the render loop is initiated.
     glfwSetFramebufferSizeCallback(window, windowResizeCallback);
     

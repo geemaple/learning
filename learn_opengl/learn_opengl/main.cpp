@@ -17,6 +17,7 @@ int main(void) {
         int number = -1;
         std::cout << "Enter lesson number:, quit with 0" << std::endl;
         std::cin >> number;
+        std::cin.clear();
         switch (number) {
             case 0:
                 quit = true;
