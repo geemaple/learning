@@ -8,11 +8,8 @@
 #ifndef lesson_03_rectangle_hpp
 #define lesson_03_rectangle_hpp
 
-#include <stdio.h>
-#include <iostream>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include <cmath>
+#include "opengl_graphic_window.hpp"
+#include "opengl_glsl_lang.hpp"
 
 namespace Lesson03 {
     int entry(void);

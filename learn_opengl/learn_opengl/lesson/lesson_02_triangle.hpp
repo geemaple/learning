@@ -8,10 +8,8 @@
 #ifndef lesson_02_triangle_hpp
 #define lesson_02_triangle_hpp
 
-#include <stdio.h>
-#include <iostream>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
+#include "opengl_graphic_window.hpp"
+#include "opengl_glsl_lang.hpp"
 
 namespace Lesson02 {
     int entry(void);

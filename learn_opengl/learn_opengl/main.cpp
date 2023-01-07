@@ -12,10 +12,9 @@
 #include "lesson_03_rectangle.hpp"
 
 int main(void) {
-    int number;
     bool quit = false;
-    
     while (!quit) {
+        int number = -1;
         std::cout << "Enter lesson number:, quit with 0" << std::endl;
         std::cin >> number;
         switch (number) {

@@ -23,107 +23,6 @@ const static char *fragmentShaderSource = "#version 330 core\n"
 "    FragColor = polygonColor;\n"
 "}\0";
 
-// handle window resize
-static void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    // For retina displays width and height will end up significantly higher than the original input values
-    std::cout << "window:" << window << " width:" << width << " height:" << height << std::endl;
-    glViewport(0, 0, width, height);
-}
-
-// handle keyboard input
-static void processInput(GLFWwindow *window) {
-    if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
-}
-
-static void query_vertex_shader_input_limit() {
-    int nrAttributes;
-    glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &nrAttributes);
-    std::cout << "Maximum nr of vertex attributes supported: " << nrAttributes << std::endl;
-}
-// create window to draw
-static GLFWwindow * createGraphicWindow(const char *title, int width, int height) {
-    glfwInit();
-    // opengl 3.3
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    // core mode
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-#ifdef __APPLE__
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-#endif
-    
-    // create window
-    GLFWwindow* window = glfwCreateWindow(width, height, title, NULL, NULL);
-    if (window == NULL)
-    {
-        std::cout << "Failed to create GLFW window" << std::endl;
-        glfwTerminate();
-        return NULL;
-    }
-    // make the window's context current
-    glfwMakeContextCurrent(window);
-    
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
-        std::cout << "Failed to initialize GLAD" << std::endl;
-    }
-    
-    // pixels view port will transform (-1 to 1) to (0, 800) and (0, 600)
-    glViewport(0, 0, width, height);
-    // We register the callback functions after we've created the window and before the render loop is initiated.
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-    
-    return window;
-}
-
-static unsigned int comipleShader(GLenum shaderType, const GLchar **code) {
-    // shader
-    unsigned int shader = glCreateShader(shaderType);
-    
-    // compile
-    glShaderSource(shader, 1, code, NULL);
-    glCompileShader(shader);
-    
-    int  success;
-    char infoLog[512];
-    glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
-    if(!success)
-    {
-        glGetShaderInfoLog(shader, 512, NULL, infoLog);
-        std::cout << "ERROR::SHADER::COMPILATION_FAILED\n" << infoLog << std::endl;
-    }
-    
-    return shader;
-}
-
-static unsigned int createShaderProgram() {
-
-    unsigned int vertexShader = comipleShader(GL_VERTEX_SHADER, &vertexShaderSource);
-    unsigned int fragmentShader = comipleShader(GL_FRAGMENT_SHADER, &fragmentShaderSource);
-
-    // create shader program
-    unsigned int shaderProgram;
-    shaderProgram = glCreateProgram();
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-    glLinkProgram(shaderProgram);
-    
-    int  success;
-    char infoLog[512];
-    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-    if(!success) {
-        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-        std::cout << "ERROR::PROGRAM::COMPILATION_FAILED\n" << infoLog << std::endl;
-    }
-    
-    glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);
-    
-    return shaderProgram;
-}
-
 int Lesson03::entry(void) {
     
     // create window
@@ -165,7 +64,10 @@ int Lesson03::entry(void) {
     glBindVertexArray(0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     
-    unsigned int shaderProgram = createShaderProgram();
+    
+    GLenum types[] = {GL_VERTEX_SHADER, GL_FRAGMENT_SHADER};
+    const GLchar* codes[] = {vertexShaderSource, fragmentShaderSource};
+    GLuint shaderProgram = createShaderProgram(types, codes, 2);
     
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     // render loop, each iteration is called a frame

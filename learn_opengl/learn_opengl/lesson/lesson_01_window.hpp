@@ -8,10 +8,7 @@
 #ifndef lesson_01_window_hpp
 #define lesson_01_window_hpp
 
-#include <stdio.h>
-#include <iostream>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
+#include "opengl_graphic_window.hpp"
 
 namespace Lesson01 {
     int entry(void);
