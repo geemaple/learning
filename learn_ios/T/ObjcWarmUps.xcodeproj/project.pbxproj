@@ -31,7 +31,6 @@
 		0515A0F11F63859800CC4162 /* ExistingMultiFileClass+TestingOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExistingMultiFileClass+TestingOne.h"; sourceTree = "<group>"; };
 		0515A0F21F63859800CC4162 /* ExistingMultiFileClass+TestingOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExistingMultiFileClass+TestingOne.m"; sourceTree = "<group>"; };
 		05240394259A08B800A36D19 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		052F44611F60622000F625E8 /* BlockWarmUps.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BlockWarmUps.mm; sourceTree = "<group>"; };
 		052F44621F60622000F625E8 /* RuntimeWarmUps.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RuntimeWarmUps.mm; sourceTree = "<group>"; };
 		052F44631F60622000F625E8 /* SizingWarmUps.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SizingWarmUps.mm; sourceTree = "<group>"; };
 		052FC7F81F666D2C007AD889 /* MRCTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCTesting.m; sourceTree = "<group>"; };
@@ -105,7 +104,6 @@
 				05651C2C2599EDDC0022ED6E /* ObjcWarmUpsTesting.m */,
 				05651C2E2599EDDC0022ED6E /* Info.plist */,
 				0515A0F01F63859800CC4162 /* Category */,
-				052F44611F60622000F625E8 /* BlockWarmUps.mm */,
 				052F44621F60622000F625E8 /* RuntimeWarmUps.mm */,
 				052F44631F60622000F625E8 /* SizingWarmUps.mm */,
 				056472EA1F626E800025D083 /* MessagingWarmUps.m */,
