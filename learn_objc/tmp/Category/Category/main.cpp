@@ -106,9 +106,7 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_407992_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"\nmain [cat class] %@ cat_class\n",31};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_407992_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"==",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_407992_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"!=",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_900514_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"Kitty",5};
 typedef signed char __int8_t;
 typedef unsigned char __uint8_t;
 typedef short __int16_t;
@@ -50186,7 +50184,6 @@ enum {
  keySenderApplicationIdentifierEntitlementAttr = 'aiea',
  keySenderApplicationSandboxed = 'sssb',
  keyActualSenderAuditToken = 'acat',
- keyAppleEventAttributesAttr = 'attr',
 };
 enum {
   kAEDebugPOSTHeader = (1 << 0),
@@ -62901,25 +62898,8 @@ extern "C" __attribute__((visibility("default"))) id _Nullable
 class_createInstanceFromZone(Class _Nullable, size_t idxIvars,
                              void * _Nullable z)
     __attribute__((availability(macosx,introduced=10.0))) __attribute__((availability(macosx,deprecated=10.5,message="use class_createInstance instead"))) __attribute__((availability(ios,unavailable))) __attribute__((availability(tvos,unavailable))) __attribute__((availability(watchos,unavailable)));
-
-#pragma clang assume_nonnull begin
-extern uintptr_t _objc_rootRetainCount(id obj);
-extern void _objc_autoreleasePoolPrint(void);
-// @protocol Mutant <NSObject>
-// - (void)becomeLion;
-/* @end */
-
-
-#ifndef _REWRITER_typedef_CatAnimal
-#define _REWRITER_typedef_CatAnimal
-typedef struct objc_object CatAnimal;
-typedef struct {} _objc_exc_CatAnimal;
-#endif
-
-struct CatAnimal_IMPL {
-	struct NSObject_IMPL NSObject_IVARS;
-};
-
+// @protocol Catify <NSObject>
+// - (void)becomeACat;
 /* @end */
 
 
@@ -62929,55 +62909,442 @@ typedef struct objc_object PrisonCat;
 typedef struct {} _objc_exc_PrisonCat;
 #endif
 
+extern "C" unsigned long OBJC_IVAR_$_PrisonCat$_name;
+extern "C" unsigned long OBJC_IVAR_$_PrisonCat$_sick;
 struct PrisonCat_IMPL {
-	struct CatAnimal_IMPL CatAnimal_IVARS;
+	struct NSObject_IMPL NSObject_IVARS;
+	BOOL _sick;
+	NSString *_name;
 };
 
 // @property(nonatomic, copy) NSString *name;
-// @property(atomic, assign) BOOL isSick;
+// @property(nonatomic, readonly)BOOL sick;
 // - (void)meow;
+/* @end */
+
+// @interface PrisonCat()
+// @property(nonatomic, readwrite)BOOL sick;
 // + (void)meow;
 /* @end */
 
-// @interface PrisonCat(Mogoal)
-// - (void)catCrawl;
+// @implementation PrisonCat
+
+static void _I_PrisonCat_meow(PrisonCat * self, SEL _cmd) {
+    printf("instance meow\n");
+}
+
+static void _C_PrisonCat_meow(Class self, SEL _cmd) {
+    printf("class meow\n");
+}
+
+static NSString * _I_PrisonCat_description(PrisonCat * self, SEL _cmd) {
+    return (NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_900514_mi_0;
+}
+
+static NSString * _I_PrisonCat_name(PrisonCat * self, SEL _cmd) { return (*(NSString **)((char *)self + OBJC_IVAR_$_PrisonCat$_name)); }
+extern "C" __declspec(dllimport) void objc_setProperty (id, SEL, long, id, bool, bool);
+
+static void _I_PrisonCat_setName_(PrisonCat * self, SEL _cmd, NSString *name) { objc_setProperty (self, _cmd, __OFFSETOFIVAR__(struct PrisonCat, _name), (id)name, 0, 1); }
+
+static BOOL _I_PrisonCat_sick(PrisonCat * self, SEL _cmd) { return (*(BOOL *)((char *)self + OBJC_IVAR_$_PrisonCat$_sick)); }
+static void _I_PrisonCat_setSick_(PrisonCat * self, SEL _cmd, BOOL sick) { (*(BOOL *)((char *)self + OBJC_IVAR_$_PrisonCat$_sick)) = sick; }
+// @end
+// @interface PrisonCat(CatCategory)<Catify>
+// @property(nonatomic, readonly)BOOL useless;
+// - (void)helloThere;
+// + (void)helloWorld;
 /* @end */
 
-#pragma clang assume_nonnull end
+// @implementation PrisonCat(CatCategory)
+// @dynamic useless;
 
-void printSuperClass(Class cls){
-    printf("superclass: %s%s", class_getName(cls), class_isMetaClass(cls)?"[meta]": "");
-    while (class_getSuperclass(cls)) {
-        cls = class_getSuperclass(cls);
-        printf(" => %s%s", class_getName(cls), class_isMetaClass(cls)?"[meta]": "");
-    }
-    printf(" => nil \n");
+static void _I_PrisonCat_CatCategory_helloThere(PrisonCat * self, SEL _cmd) {
+    printf("nice there\n");
 }
-void printIsaRelation(id obj) {
-    Class cls = object_getClass(obj);
-    printf("isa: %s := %s%s", ((const char * _Nullable (*)(id, SEL))(void *)objc_msgSend)((id)((NSString *(*)(id, SEL))(void *)objc_msgSend)((id)obj, sel_registerName("description")), sel_registerName("UTF8String")), class_getName(cls), class_isMetaClass(cls) ? "[meta]": "");
-    while (object_getClass(cls)) {
-        if (cls == object_getClass(cls)) {
-            break;
-        }
-        cls = object_getClass(cls);
-        printf(" := %s%s", class_getName(cls), class_isMetaClass(cls)? "[meta]": "");
-    }
-    printf(" := %s%s := ...\n", class_getName(cls), class_isMetaClass(cls)? "[meta]": "");
+
+static void _C_PrisonCat_CatCategory_helloWorld(Class self, SEL _cmd) {
+    printf("nice world\n");
 }
+
+static void _I_PrisonCat_CatCategory_becomeACat(PrisonCat * self, SEL _cmd) {
+    printf("pretend to be a cat\n");
+}
+// @end
 int main(int argc, const char * argv[]) {
     /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
         PrisonCat *kitty = ((PrisonCat *(*)(id, SEL))(void *)objc_msgSend)((id)((PrisonCat *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("PrisonCat"), sel_registerName("alloc")), sel_registerName("init"));
-        Class cat_class = object_getClass(kitty);
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_407992_mi_0, (((Class (*)(id, SEL))(void *)objc_msgSend)((id)kitty, sel_registerName("class")) == cat_class ? (NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_407992_mi_1 : (NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_407992_mi_2));
         ((void (*)(id, SEL))(void *)objc_msgSend)((id)kitty, sel_registerName("meow"));
         ((void (*)(id, SEL))(void *)objc_msgSend)((id)((Class (*)(id, SEL))(void *)objc_msgSend)((id)kitty, sel_registerName("class")), sel_registerName("meow"));
-        printIsaRelation(kitty);
-        Class cls = object_getClass(kitty);
-        printSuperClass(cls);
-        Class meta_cls = object_getClass(cls);
-        printSuperClass(meta_cls);
+        ((void (*)(id, SEL))(void *)objc_msgSend)((id)kitty, sel_registerName("helloThere"));
+        ((void (*)(id, SEL))(void *)objc_msgSend)((id)((Class (*)(id, SEL))(void *)objc_msgSend)((id)kitty, sel_registerName("class")), sel_registerName("helloWorld"));
     }
     return 0;
 }
+
+struct _prop_t {
+	const char *name;
+	const char *attributes;
+};
+
+struct _protocol_t;
+
+struct _objc_method {
+	struct objc_selector * _cmd;
+	const char *method_type;
+	void  *_imp;
+};
+
+struct _protocol_t {
+	void * isa;  // NULL
+	const char *protocol_name;
+	const struct _protocol_list_t * protocol_list; // super protocols
+	const struct method_list_t *instance_methods;
+	const struct method_list_t *class_methods;
+	const struct method_list_t *optionalInstanceMethods;
+	const struct method_list_t *optionalClassMethods;
+	const struct _prop_list_t * properties;
+	const unsigned int size;  // sizeof(struct _protocol_t)
+	const unsigned int flags;  // = 0
+	const char ** extendedMethodTypes;
+};
+
+struct _ivar_t {
+	unsigned long int *offset;  // pointer to ivar offset location
+	const char *name;
+	const char *type;
+	unsigned int alignment;
+	unsigned int  size;
+};
+
+struct _class_ro_t {
+	unsigned int flags;
+	unsigned int instanceStart;
+	unsigned int instanceSize;
+	const unsigned char *ivarLayout;
+	const char *name;
+	const struct _method_list_t *baseMethods;
+	const struct _objc_protocol_list *baseProtocols;
+	const struct _ivar_list_t *ivars;
+	const unsigned char *weakIvarLayout;
+	const struct _prop_list_t *properties;
+};
+
+struct _class_t {
+	struct _class_t *isa;
+	struct _class_t *superclass;
+	void *cache;
+	void *vtable;
+	struct _class_ro_t *ro;
+};
+
+struct _category_t {
+	const char *name;
+	struct _class_t *cls;
+	const struct _method_list_t *instance_methods;
+	const struct _method_list_t *class_methods;
+	const struct _protocol_list_t *protocols;
+	const struct _prop_list_t *properties;
+};
+extern "C" __declspec(dllimport) struct objc_cache _objc_empty_cache;
+#pragma warning(disable:4273)
+
+extern "C" unsigned long int OBJC_IVAR_$_PrisonCat$_sick __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct PrisonCat, _sick);
+extern "C" unsigned long int OBJC_IVAR_$_PrisonCat$_name __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct PrisonCat, _name);
+
+static struct /*_ivar_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _prop_t)
+	unsigned int count;
+	struct _ivar_t ivar_list[2];
+} _OBJC_$_INSTANCE_VARIABLES_PrisonCat __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_ivar_t),
+	2,
+	{{(unsigned long int *)&OBJC_IVAR_$_PrisonCat$_sick, "_sick", "B", 0, 1},
+	 {(unsigned long int *)&OBJC_IVAR_$_PrisonCat$_name, "_name", "@\"NSString\"", 3, 8}}
+};
+
+static struct /*_method_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _objc_method)
+	unsigned int method_count;
+	struct _objc_method method_list[10];
+} _OBJC_$_INSTANCE_METHODS_PrisonCat __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_objc_method),
+	10,
+	{{(struct objc_selector *)"meow", "v16@0:8", (void *)_I_PrisonCat_meow},
+	{(struct objc_selector *)"description", "@16@0:8", (void *)_I_PrisonCat_description},
+	{(struct objc_selector *)"name", "@16@0:8", (void *)_I_PrisonCat_name},
+	{(struct objc_selector *)"setName:", "v24@0:8@16", (void *)_I_PrisonCat_setName_},
+	{(struct objc_selector *)"sick", "B16@0:8", (void *)_I_PrisonCat_sick},
+	{(struct objc_selector *)"setSick:", "v20@0:8B16", (void *)_I_PrisonCat_setSick_},
+	{(struct objc_selector *)"name", "@16@0:8", (void *)_I_PrisonCat_name},
+	{(struct objc_selector *)"setName:", "v24@0:8@16", (void *)_I_PrisonCat_setName_},
+	{(struct objc_selector *)"sick", "B16@0:8", (void *)_I_PrisonCat_sick},
+	{(struct objc_selector *)"setSick:", "v20@0:8B16", (void *)_I_PrisonCat_setSick_}}
+};
+
+static struct /*_method_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _objc_method)
+	unsigned int method_count;
+	struct _objc_method method_list[1];
+} _OBJC_$_CLASS_METHODS_PrisonCat __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_objc_method),
+	1,
+	{{(struct objc_selector *)"meow", "v16@0:8", (void *)_C_PrisonCat_meow}}
+};
+
+static struct /*_prop_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _prop_t)
+	unsigned int count_of_properties;
+	struct _prop_t prop_list[2];
+} _OBJC_$_PROP_LIST_PrisonCat __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_prop_t),
+	2,
+	{{"name","T@\"NSString\",C,N,V_name"},
+	{"sick","TB,R,N"}}
+};
+
+static struct _class_ro_t _OBJC_METACLASS_RO_$_PrisonCat __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	1, sizeof(struct _class_t), sizeof(struct _class_t), 
+	0, 
+	"PrisonCat",
+	(const struct _method_list_t *)&_OBJC_$_CLASS_METHODS_PrisonCat,
+	0, 
+	0, 
+	0, 
+	0, 
+};
+
+static struct _class_ro_t _OBJC_CLASS_RO_$_PrisonCat __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	0, __OFFSETOFIVAR__(struct PrisonCat, _sick), sizeof(struct PrisonCat_IMPL), 
+	0, 
+	"PrisonCat",
+	(const struct _method_list_t *)&_OBJC_$_INSTANCE_METHODS_PrisonCat,
+	0, 
+	(const struct _ivar_list_t *)&_OBJC_$_INSTANCE_VARIABLES_PrisonCat,
+	0, 
+	(const struct _prop_list_t *)&_OBJC_$_PROP_LIST_PrisonCat,
+};
+
+extern "C" __declspec(dllimport) struct _class_t OBJC_METACLASS_$_NSObject;
+
+extern "C" __declspec(dllexport) struct _class_t OBJC_METACLASS_$_PrisonCat __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+	0, // &OBJC_METACLASS_$_NSObject,
+	0, // &OBJC_METACLASS_$_NSObject,
+	0, // (void *)&_objc_empty_cache,
+	0, // unused, was (void *)&_objc_empty_vtable,
+	&_OBJC_METACLASS_RO_$_PrisonCat,
+};
+
+extern "C" __declspec(dllimport) struct _class_t OBJC_CLASS_$_NSObject;
+
+extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_PrisonCat __attribute__ ((used, section ("__DATA,__objc_data"))) = {
+	0, // &OBJC_METACLASS_$_PrisonCat,
+	0, // &OBJC_CLASS_$_NSObject,
+	0, // (void *)&_objc_empty_cache,
+	0, // unused, was (void *)&_objc_empty_vtable,
+	&_OBJC_CLASS_RO_$_PrisonCat,
+};
+static void OBJC_CLASS_SETUP_$_PrisonCat(void ) {
+	OBJC_METACLASS_$_PrisonCat.isa = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_PrisonCat.superclass = &OBJC_METACLASS_$_NSObject;
+	OBJC_METACLASS_$_PrisonCat.cache = &_objc_empty_cache;
+	OBJC_CLASS_$_PrisonCat.isa = &OBJC_METACLASS_$_PrisonCat;
+	OBJC_CLASS_$_PrisonCat.superclass = &OBJC_CLASS_$_NSObject;
+	OBJC_CLASS_$_PrisonCat.cache = &_objc_empty_cache;
+}
+#pragma section(".objc_inithooks$B", long, read, write)
+__declspec(allocate(".objc_inithooks$B")) static void *OBJC_CLASS_SETUP[] = {
+	(void *)&OBJC_CLASS_SETUP_$_PrisonCat,
+};
+
+static struct /*_method_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _objc_method)
+	unsigned int method_count;
+	struct _objc_method method_list[2];
+} _OBJC_$_CATEGORY_INSTANCE_METHODS_PrisonCat_$_CatCategory __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_objc_method),
+	2,
+	{{(struct objc_selector *)"helloThere", "v16@0:8", (void *)_I_PrisonCat_CatCategory_helloThere},
+	{(struct objc_selector *)"becomeACat", "v16@0:8", (void *)_I_PrisonCat_CatCategory_becomeACat}}
+};
+
+static struct /*_method_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _objc_method)
+	unsigned int method_count;
+	struct _objc_method method_list[1];
+} _OBJC_$_CATEGORY_CLASS_METHODS_PrisonCat_$_CatCategory __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_objc_method),
+	1,
+	{{(struct objc_selector *)"helloWorld", "v16@0:8", (void *)_C_PrisonCat_CatCategory_helloWorld}}
+};
+
+static const char *_OBJC_PROTOCOL_METHOD_TYPES_NSObject [] __attribute__ ((used, section ("__DATA,__objc_const"))) = 
+{
+	"B24@0:8@16",
+	"#16@0:8",
+	"@16@0:8",
+	"@24@0:8:16",
+	"@32@0:8:16@24",
+	"@40@0:8:16@24@32",
+	"B16@0:8",
+	"B24@0:8#16",
+	"B24@0:8#16",
+	"B24@0:8@\"Protocol\"16",
+	"B24@0:8:16",
+	"@16@0:8",
+	"Vv16@0:8",
+	"@16@0:8",
+	"Q16@0:8",
+	"^{_NSZone=}16@0:8",
+	"Q16@0:8",
+	"#16@0:8",
+	"@\"NSString\"16@0:8",
+	"@\"NSString\"16@0:8"
+};
+
+static struct /*_method_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _objc_method)
+	unsigned int method_count;
+	struct _objc_method method_list[19];
+} _OBJC_PROTOCOL_INSTANCE_METHODS_NSObject __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_objc_method),
+	19,
+	{{(struct objc_selector *)"isEqual:", "B24@0:8@16", 0},
+	{(struct objc_selector *)"class", "#16@0:8", 0},
+	{(struct objc_selector *)"self", "@16@0:8", 0},
+	{(struct objc_selector *)"performSelector:", "@24@0:8:16", 0},
+	{(struct objc_selector *)"performSelector:withObject:", "@32@0:8:16@24", 0},
+	{(struct objc_selector *)"performSelector:withObject:withObject:", "@40@0:8:16@24@32", 0},
+	{(struct objc_selector *)"isProxy", "B16@0:8", 0},
+	{(struct objc_selector *)"isKindOfClass:", "B24@0:8#16", 0},
+	{(struct objc_selector *)"isMemberOfClass:", "B24@0:8#16", 0},
+	{(struct objc_selector *)"conformsToProtocol:", "B24@0:8@16", 0},
+	{(struct objc_selector *)"respondsToSelector:", "B24@0:8:16", 0},
+	{(struct objc_selector *)"retain", "@16@0:8", 0},
+	{(struct objc_selector *)"release", "Vv16@0:8", 0},
+	{(struct objc_selector *)"autorelease", "@16@0:8", 0},
+	{(struct objc_selector *)"retainCount", "Q16@0:8", 0},
+	{(struct objc_selector *)"zone", "^{_NSZone=}16@0:8", 0},
+	{(struct objc_selector *)"hash", "Q16@0:8", 0},
+	{(struct objc_selector *)"superclass", "#16@0:8", 0},
+	{(struct objc_selector *)"description", "@16@0:8", 0}}
+};
+
+static struct /*_method_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _objc_method)
+	unsigned int method_count;
+	struct _objc_method method_list[1];
+} _OBJC_PROTOCOL_OPT_INSTANCE_METHODS_NSObject __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_objc_method),
+	1,
+	{{(struct objc_selector *)"debugDescription", "@16@0:8", 0}}
+};
+
+static struct /*_prop_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _prop_t)
+	unsigned int count_of_properties;
+	struct _prop_t prop_list[4];
+} _OBJC_PROTOCOL_PROPERTIES_NSObject __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_prop_t),
+	4,
+	{{"hash","TQ,R"},
+	{"superclass","T#,R"},
+	{"description","T@\"NSString\",R,C"},
+	{"debugDescription","T@\"NSString\",R,C"}}
+};
+
+struct _protocol_t _OBJC_PROTOCOL_NSObject __attribute__ ((used)) = {
+	0,
+	"NSObject",
+	0,
+	(const struct method_list_t *)&_OBJC_PROTOCOL_INSTANCE_METHODS_NSObject,
+	0,
+	(const struct method_list_t *)&_OBJC_PROTOCOL_OPT_INSTANCE_METHODS_NSObject,
+	0,
+	(const struct _prop_list_t *)&_OBJC_PROTOCOL_PROPERTIES_NSObject,
+	sizeof(_protocol_t),
+	0,
+	(const char **)&_OBJC_PROTOCOL_METHOD_TYPES_NSObject
+};
+struct _protocol_t *_OBJC_LABEL_PROTOCOL_$_NSObject = &_OBJC_PROTOCOL_NSObject;
+
+static const char *_OBJC_PROTOCOL_METHOD_TYPES_Catify [] __attribute__ ((used, section ("__DATA,__objc_const"))) = 
+{
+	"v16@0:8"
+};
+
+static struct /*_protocol_list_t*/ {
+	long protocol_count;  // Note, this is 32/64 bit
+	struct _protocol_t *super_protocols[1];
+} _OBJC_PROTOCOL_REFS_Catify __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	1,
+	&_OBJC_PROTOCOL_NSObject
+};
+
+static struct /*_method_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _objc_method)
+	unsigned int method_count;
+	struct _objc_method method_list[1];
+} _OBJC_PROTOCOL_INSTANCE_METHODS_Catify __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_objc_method),
+	1,
+	{{(struct objc_selector *)"becomeACat", "v16@0:8", 0}}
+};
+
+struct _protocol_t _OBJC_PROTOCOL_Catify __attribute__ ((used)) = {
+	0,
+	"Catify",
+	(const struct _protocol_list_t *)&_OBJC_PROTOCOL_REFS_Catify,
+	(const struct method_list_t *)&_OBJC_PROTOCOL_INSTANCE_METHODS_Catify,
+	0,
+	0,
+	0,
+	0,
+	sizeof(_protocol_t),
+	0,
+	(const char **)&_OBJC_PROTOCOL_METHOD_TYPES_Catify
+};
+struct _protocol_t *_OBJC_LABEL_PROTOCOL_$_Catify = &_OBJC_PROTOCOL_Catify;
+
+static struct /*_protocol_list_t*/ {
+	long protocol_count;  // Note, this is 32/64 bit
+	struct _protocol_t *super_protocols[1];
+} _OBJC_CATEGORY_PROTOCOLS_$_PrisonCat_$_CatCategory __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	1,
+	&_OBJC_PROTOCOL_Catify
+};
+
+static struct /*_prop_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _prop_t)
+	unsigned int count_of_properties;
+	struct _prop_t prop_list[1];
+} _OBJC_$_PROP_LIST_PrisonCat_$_CatCategory __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_prop_t),
+	1,
+	{{"useless","TB,R,D,N"}}
+};
+
+extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_PrisonCat;
+
+static struct _category_t _OBJC_$_CATEGORY_PrisonCat_$_CatCategory __attribute__ ((used, section ("__DATA,__objc_const"))) = 
+{
+	"PrisonCat",
+	0, // &OBJC_CLASS_$_PrisonCat,
+	(const struct _method_list_t *)&_OBJC_$_CATEGORY_INSTANCE_METHODS_PrisonCat_$_CatCategory,
+	(const struct _method_list_t *)&_OBJC_$_CATEGORY_CLASS_METHODS_PrisonCat_$_CatCategory,
+	(const struct _protocol_list_t *)&_OBJC_CATEGORY_PROTOCOLS_$_PrisonCat_$_CatCategory,
+	(const struct _prop_list_t *)&_OBJC_$_PROP_LIST_PrisonCat_$_CatCategory,
+};
+static void OBJC_CATEGORY_SETUP_$_PrisonCat_$_CatCategory(void ) {
+	_OBJC_$_CATEGORY_PrisonCat_$_CatCategory.cls = &OBJC_CLASS_$_PrisonCat;
+}
+#pragma section(".objc_inithooks$B", long, read, write)
+__declspec(allocate(".objc_inithooks$B")) static void *OBJC_CATEGORY_SETUP[] = {
+	(void *)&OBJC_CATEGORY_SETUP_$_PrisonCat_$_CatCategory,
+};
+static struct _class_t *L_OBJC_LABEL_CLASS_$ [1] __attribute__((used, section ("__DATA, __objc_classlist,regular,no_dead_strip")))= {
+	&OBJC_CLASS_$_PrisonCat,
+};
+static struct _category_t *L_OBJC_LABEL_CATEGORY_$ [1] __attribute__((used, section ("__DATA, __objc_catlist,regular,no_dead_strip")))= {
+	&_OBJC_$_CATEGORY_PrisonCat_$_CatCategory,
+};
 static struct IMAGE_INFO { unsigned version; unsigned flag; } _OBJC_IMAGE_INFO = { 0, 2 };

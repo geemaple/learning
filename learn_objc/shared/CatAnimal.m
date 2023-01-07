@@ -27,12 +27,12 @@
     printf("instance meow\n");
 }
 
-- (NSString *)description {
-    return @"Kitty";
-}
-
 + (void)meow{
     printf("class meow\n");
+}
+
+- (NSString *)description {
+    return @"Kitty";
 }
 
 @end

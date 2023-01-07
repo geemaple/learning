@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 extern uintptr_t _objc_rootRetainCount(id obj); // 这是个私有API，作用是返回obj的引用计数。
 extern void _objc_autoreleasePoolPrint(void); //这是个私有API, 作用是打印当前的自动释放池对象。
 
+@protocol Mutant <NSObject>
+
+- (void)becomeLion;
+
+@end
+
 @interface CatAnimal : NSObject
 
 @end
@@ -24,6 +30,9 @@ extern void _objc_autoreleasePoolPrint(void); //这是个私有API, 作用是打
 - (void)meow;
 + (void)meow;
 @end
+
+
+
 
 @interface PrisonCat(Mogoal)
 - (void)catCrawl;
