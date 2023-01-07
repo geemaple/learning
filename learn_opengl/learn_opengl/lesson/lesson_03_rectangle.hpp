@@ -12,6 +12,7 @@
 #include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <cmath>
 
 namespace Lesson03 {
     int entry(void);

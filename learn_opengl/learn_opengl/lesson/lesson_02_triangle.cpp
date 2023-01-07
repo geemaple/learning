@@ -131,17 +131,16 @@ int Lesson02::entry(void) {
     };
     
     unsigned int VBO, VAO;
-    // create vertex buffer/Array objects on GPU
+    // create VBO
     glGenBuffers(1, &VBO);
-    glGenVertexArrays(1, &VAO);
-    
     // bind
-    glBindVertexArray(VAO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    
     // copy data to the bond buffer
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     
+    // create VAO
+    glGenVertexArrays(1, &VAO);
+    glBindVertexArray(VAO);
     // agttributes
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
@@ -152,7 +151,7 @@ int Lesson02::entry(void) {
     
     unsigned int shaderProgram = createShaderProgram();
     
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     // render loop, each iteration is called a frame
     while(!glfwWindowShouldClose(window))
     {

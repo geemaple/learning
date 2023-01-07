@@ -17,9 +17,10 @@ const static char *vertexShaderSource = "#version 330 core\n"
 // fragment shader
 const static char *fragmentShaderSource = "#version 330 core\n"
 "out vec4 FragColor;\n"
+"uniform vec4 polygonColor;\n"
 "void main()\n"
 "{\n"
-"    FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+"    FragColor = polygonColor;\n"
 "}\0";
 
 // handle window resize
@@ -36,6 +37,11 @@ static void processInput(GLFWwindow *window) {
         glfwSetWindowShouldClose(window, true);
 }
 
+static void query_vertex_shader_input_limit() {
+    int nrAttributes;
+    glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &nrAttributes);
+    std::cout << "Maximum nr of vertex attributes supported: " << nrAttributes << std::endl;
+}
 // create window to draw
 static GLFWwindow * createGraphicWindow(const char *title, int width, int height) {
     glfwInit();
@@ -119,10 +125,11 @@ static unsigned int createShaderProgram() {
 }
 
 int Lesson03::entry(void) {
-
+    
     // create window
     GLFWwindow* window = createGraphicWindow("OpenGL Lesson 03", 800, 600);
-
+    query_vertex_shader_input_limit();
+    
     float vertices[] = {
          0.5f,  0.5f, 0.0f,  // top right
          0.5f, -0.5f, 0.0f,  // bottom right
@@ -134,7 +141,7 @@ int Lesson03::entry(void) {
         1, 2, 3    // second triangle
     };
     
-    unsigned int VAO, VBO, EBO;
+    GLuint VAO, VBO, EBO;
     // create
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -156,10 +163,11 @@ int Lesson03::entry(void) {
     // unbind
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     
     unsigned int shaderProgram = createShaderProgram();
     
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     // render loop, each iteration is called a frame
     while(!glfwWindowShouldClose(window))
     {
@@ -169,7 +177,15 @@ int Lesson03::entry(void) {
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         
+        // find variable
+        float timeValue = glfwGetTime();
+        float greenValue = sin(timeValue) / 2.0f + 0.5f;
+        int polygonColor = glGetUniformLocation(shaderProgram, "polygonColor");
+        
+        // update color
         glUseProgram(shaderProgram);
+        glUniform4f(polygonColor, 0.0f, greenValue, 0.0f, 1.0f);
+        
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         
