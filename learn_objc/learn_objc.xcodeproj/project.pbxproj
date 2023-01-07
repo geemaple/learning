@@ -413,7 +413,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "clang -rewrite-objc -I$SRCROOT/shared $SRCROOT/class_object/main.m -o $SRCROOT/class_object/clang_rewrite_main.cpp\n";
+			shellScript = "if [ -f $SRCROOT/class_object/clang_rewrite_main.cpp ]; then\necho \"file exists skip clang rewrite\"\nelse\nclang -rewrite-objc -I$SRCROOT/shared $SRCROOT/class_object/main.m -o $SRCROOT/class_object/clang_rewrite_main.cpp\nfi\n";
 		};
 		DC476407296956D8005D1EDE /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -430,7 +430,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "clang -rewrite-objc $SRCROOT/block/main.m -o $SRCROOT/block/clang_rewrite_main.cpp\n";
+			shellScript = "if [ -f $SRCROOT/block/clang_rewrite_main.cpp ]; then\necho \"file exists skip clang rewrite\"\nelse\nclang -rewrite-objc -I$SRCROOT/shared $SRCROOT/block/main.m -o $SRCROOT/block/clang_rewrite_main.cpp\nfi\n";
 		};
 		DC47645729695E87005D1EDE /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -447,7 +447,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "clang -rewrite-objc $SRCROOT/gcd/main.m -o $SRCROOT/gcd/clang_rewrite_main.cpp\n";
+			shellScript = "if [ -f $SRCROOT/gcd/clang_rewrite_main.cpp ]; then\necho \"file exists skip clang rewrite\"\nelse\nclang -rewrite-objc -I$SRCROOT/shared $SRCROOT/gcd/main.m -o $SRCROOT/gcd/clang_rewrite_main.cpp\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
