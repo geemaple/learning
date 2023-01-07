@@ -1,11 +1,11 @@
 //
-//  lesson_01.cpp
+//  lesson_01_window.cpp
 //  learn_opengl
 //
 //  Created by Felix Ji on 1/5/23.
 //
 
-#include "lesson_01.hpp"
+#include "lesson_01_window.hpp"
 
 // handle window resize
 static void framebuffer_size_callback(GLFWwindow* window, int width, int height)

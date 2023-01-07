@@ -10,11 +10,12 @@
 		050CB33629665AB9005A1946 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 050CB33529665AB9005A1946 /* main.cpp */; };
 		050CB33E29665D17005A1946 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050CB33D29665D17005A1946 /* OpenGL.framework */; };
 		05831EAC2966B905006773FA /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 05831E9C2966B905006773FA /* glad.c */; };
-		DC4763942967E588005D1EDE /* lesson_02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4763922967E588005D1EDE /* lesson_02.cpp */; };
+		DC4763942967E588005D1EDE /* lesson_02_triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4763922967E588005D1EDE /* lesson_02_triangle.cpp */; };
+		DC4764762969714C005D1EDE /* lesson_03_rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764742969714C005D1EDE /* lesson_03_rectangle.cpp */; };
 		DCF4B4AE2966C7CA000F4107 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EAB2966B905006773FA /* libglfw3.a */; };
 		DCF4B4AF2966C874000F4107 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EAE2966BA23006773FA /* Cocoa.framework */; };
 		DCF4B4B02966C87F000F4107 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EB02966BA84006773FA /* IOKit.framework */; };
-		DCF4B4B92966D017000F4107 /* lesson_01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF4B4B72966D017000F4107 /* lesson_01.cpp */; };
+		DCF4B4B92966D017000F4107 /* lesson_01_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF4B4B72966D017000F4107 /* lesson_01_window.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,10 +39,12 @@
 		05831EAB2966B905006773FA /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libglfw3.a; sourceTree = "<group>"; };
 		05831EAE2966BA23006773FA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		05831EB02966BA84006773FA /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		DC4763922967E588005D1EDE /* lesson_02.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_02.cpp; sourceTree = "<group>"; };
-		DC4763932967E588005D1EDE /* lesson_02.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_02.hpp; sourceTree = "<group>"; };
-		DCF4B4B72966D017000F4107 /* lesson_01.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_01.cpp; sourceTree = "<group>"; };
-		DCF4B4B82966D017000F4107 /* lesson_01.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lesson_01.hpp; sourceTree = "<group>"; };
+		DC4763922967E588005D1EDE /* lesson_02_triangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_02_triangle.cpp; sourceTree = "<group>"; };
+		DC4763932967E588005D1EDE /* lesson_02_triangle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_02_triangle.hpp; sourceTree = "<group>"; };
+		DC4764742969714C005D1EDE /* lesson_03_rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_03_rectangle.cpp; sourceTree = "<group>"; };
+		DC4764752969714C005D1EDE /* lesson_03_rectangle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_03_rectangle.hpp; sourceTree = "<group>"; };
+		DCF4B4B72966D017000F4107 /* lesson_01_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_01_window.cpp; sourceTree = "<group>"; };
+		DCF4B4B82966D017000F4107 /* lesson_01_window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lesson_01_window.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,10 +144,12 @@
 		DCF4B4B62966D017000F4107 /* lesson */ = {
 			isa = PBXGroup;
 			children = (
-				DCF4B4B72966D017000F4107 /* lesson_01.cpp */,
-				DCF4B4B82966D017000F4107 /* lesson_01.hpp */,
-				DC4763922967E588005D1EDE /* lesson_02.cpp */,
-				DC4763932967E588005D1EDE /* lesson_02.hpp */,
+				DCF4B4B72966D017000F4107 /* lesson_01_window.cpp */,
+				DCF4B4B82966D017000F4107 /* lesson_01_window.hpp */,
+				DC4763922967E588005D1EDE /* lesson_02_triangle.cpp */,
+				DC4763932967E588005D1EDE /* lesson_02_triangle.hpp */,
+				DC4764742969714C005D1EDE /* lesson_03_rectangle.cpp */,
+				DC4764752969714C005D1EDE /* lesson_03_rectangle.hpp */,
 			);
 			path = lesson;
 			sourceTree = "<group>";
@@ -207,9 +212,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				050CB33629665AB9005A1946 /* main.cpp in Sources */,
-				DCF4B4B92966D017000F4107 /* lesson_01.cpp in Sources */,
+				DCF4B4B92966D017000F4107 /* lesson_01_window.cpp in Sources */,
 				05831EAC2966B905006773FA /* glad.c in Sources */,
-				DC4763942967E588005D1EDE /* lesson_02.cpp in Sources */,
+				DC4764762969714C005D1EDE /* lesson_03_rectangle.cpp in Sources */,
+				DC4763942967E588005D1EDE /* lesson_02_triangle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

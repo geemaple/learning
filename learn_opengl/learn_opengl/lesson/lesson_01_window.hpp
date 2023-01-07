@@ -1,12 +1,12 @@
 //
-//  lesson_01.hpp
+//  lesson_01_window.hpp
 //  learn_opengl
 //
 //  Created by Felix Ji on 1/5/23.
 //
 
-#ifndef lesson_01_hpp
-#define lesson_01_hpp
+#ifndef lesson_01_window_hpp
+#define lesson_01_window_hpp
 
 #include <stdio.h>
 #include <iostream>
@@ -17,5 +17,5 @@ namespace Lesson01 {
     int entry(void);
 };
 
-#endif /* lesson_01_hpp */
+#endif /* lesson_01_window_hpp */
 

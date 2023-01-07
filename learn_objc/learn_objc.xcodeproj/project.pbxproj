@@ -378,9 +378,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				DC4764162969594C005D1EDE /* unit_test */,
 				DC4763ED296951FB005D1EDE /* class_object */,
 				DC4763FF29695564005D1EDE /* block */,
-				DC4764162969594C005D1EDE /* unit_test */,
 				DC47644F29695E5B005D1EDE /* gcd */,
 				DC47646C29695F29005D1EDE /* file */,
 			);

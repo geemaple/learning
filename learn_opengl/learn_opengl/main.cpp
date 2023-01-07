@@ -7,15 +7,16 @@
 
 
 #include <iostream>
-#include "lesson_01.hpp"
-#include "lesson_02.hpp"
+#include "lesson_01_window.hpp"
+#include "lesson_02_triangle.hpp"
+#include "lesson_03_rectangle.hpp"
 
 int main(void) {
     int number;
     bool quit = false;
     
     while (!quit) {
-        std::cout << "Enter lesson number [1-2]:, quit with 0" << std::endl;
+        std::cout << "Enter lesson number:, quit with 0" << std::endl;
         std::cin >> number;
         switch (number) {
             case 0:
@@ -26,6 +27,9 @@ int main(void) {
                 break;
             case 2:
                 Lesson02::entry();
+                break;
+            case 3:
+                Lesson03::entry();
                 break;
         }
     }

@@ -1,12 +1,12 @@
 //
-//  lesson_02.hpp
+//  lesson_02_triangle.hpp
 //  learn_opengl
 //
 //  Created by Felix Ji on 1/6/23.
 //
 
-#ifndef lesson_02_hpp
-#define lesson_02_hpp
+#ifndef lesson_02_triangle_hpp
+#define lesson_02_triangle_hpp
 
 #include <stdio.h>
 #include <iostream>
@@ -17,4 +17,4 @@ namespace Lesson02 {
     int entry(void);
 };
 
-#endif /* lesson_02_hpp */
+#endif /* lesson_02_triangle_hpp */
