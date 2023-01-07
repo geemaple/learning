@@ -8,22 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		052403BA259A0A0E00A36D19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 052403B9259A0A0E00A36D19 /* main.m */; };
-		05240488259A179000A36D19 /* RuntimeWarmUps.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05240476259A179000A36D19 /* RuntimeWarmUps.mm */; };
-		05240489259A179000A36D19 /* SizingWarmUps.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05240477259A179000A36D19 /* SizingWarmUps.mm */; };
-		0524048A259A179000A36D19 /* ObjcBasicsTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 05240478259A179000A36D19 /* ObjcBasicsTesting.m */; };
-		0524048B259A179000A36D19 /* ExistingMultiFileClass+TestingOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 0524047B259A179000A36D19 /* ExistingMultiFileClass+TestingOne.m */; };
-		0524048C259A179000A36D19 /* ExistingMultiFileClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0524047C259A179000A36D19 /* ExistingMultiFileClass.m */; };
-		0524048D259A179000A36D19 /* ExistingMultiFileClass+TestingTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0524047D259A179000A36D19 /* ExistingMultiFileClass+TestingTwo.m */; };
-		0524048E259A179000A36D19 /* MessagingWarmUps.m in Sources */ = {isa = PBXBuildFile; fileRef = 05240480259A179000A36D19 /* MessagingWarmUps.m */; };
-		0524048F259A179000A36D19 /* BlockWarmUps.mm in Sources */ = {isa = PBXBuildFile; fileRef = 05240481259A179000A36D19 /* BlockWarmUps.mm */; };
-		05240490259A179000A36D19 /* MRCTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 05240482259A179000A36D19 /* MRCTesting.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		05240491259A179000A36D19 /* ARCTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 05240483259A179000A36D19 /* ARCTesting.m */; };
-		05240492259A179000A36D19 /* ObjcWarmUpsTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 05240484259A179000A36D19 /* ObjcWarmUpsTesting.m */; };
-		05240493259A179000A36D19 /* CategoryWarmUps.m in Sources */ = {isa = PBXBuildFile; fileRef = 05240485259A179000A36D19 /* CategoryWarmUps.m */; };
-		05240494259A179000A36D19 /* GCDWarmUps.m in Sources */ = {isa = PBXBuildFile; fileRef = 05240486259A179000A36D19 /* GCDWarmUps.m */; };
-		05240495259A179000A36D19 /* UndefinedWarmUps.m in Sources */ = {isa = PBXBuildFile; fileRef = 05240487259A179000A36D19 /* UndefinedWarmUps.m */; };
-		05B39E1E259C8F7D001AC4DB /* CatAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B39E1D259C8F7D001AC4DB /* CatAnimal.m */; };
-		05B39E1F259C8F7D001AC4DB /* CatAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B39E1D259C8F7D001AC4DB /* CatAnimal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,39 +25,11 @@
 /* Begin PBXFileReference section */
 		052403B6259A0A0E00A36D19 /* ObjcBasics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjcBasics; sourceTree = BUILT_PRODUCTS_DIR; };
 		052403B9259A0A0E00A36D19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		052403C5259A0A2700A36D19 /* ObjcBasicsTesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjcBasicsTesting.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		052403C9259A0A2700A36D19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		052403DE259A0B5E00A36D19 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		05240476259A179000A36D19 /* RuntimeWarmUps.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RuntimeWarmUps.mm; sourceTree = "<group>"; };
-		05240477259A179000A36D19 /* SizingWarmUps.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SizingWarmUps.mm; sourceTree = "<group>"; };
-		05240478259A179000A36D19 /* ObjcBasicsTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcBasicsTesting.m; sourceTree = "<group>"; };
-		0524047A259A179000A36D19 /* ExistingMultiFileClass+TestingTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExistingMultiFileClass+TestingTwo.h"; sourceTree = "<group>"; };
-		0524047B259A179000A36D19 /* ExistingMultiFileClass+TestingOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExistingMultiFileClass+TestingOne.m"; sourceTree = "<group>"; };
-		0524047C259A179000A36D19 /* ExistingMultiFileClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExistingMultiFileClass.m; sourceTree = "<group>"; };
-		0524047D259A179000A36D19 /* ExistingMultiFileClass+TestingTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExistingMultiFileClass+TestingTwo.m"; sourceTree = "<group>"; };
-		0524047E259A179000A36D19 /* ExistingMultiFileClass+TestingOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExistingMultiFileClass+TestingOne.h"; sourceTree = "<group>"; };
-		0524047F259A179000A36D19 /* ExistingMultiFileClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExistingMultiFileClass.h; sourceTree = "<group>"; };
-		05240480259A179000A36D19 /* MessagingWarmUps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingWarmUps.m; sourceTree = "<group>"; };
-		05240481259A179000A36D19 /* BlockWarmUps.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BlockWarmUps.mm; sourceTree = "<group>"; };
-		05240482259A179000A36D19 /* MRCTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCTesting.m; sourceTree = "<group>"; };
-		05240483259A179000A36D19 /* ARCTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCTesting.m; sourceTree = "<group>"; };
-		05240484259A179000A36D19 /* ObjcWarmUpsTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcWarmUpsTesting.m; sourceTree = "<group>"; };
-		05240485259A179000A36D19 /* CategoryWarmUps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryWarmUps.m; sourceTree = "<group>"; };
-		05240486259A179000A36D19 /* GCDWarmUps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWarmUps.m; sourceTree = "<group>"; };
-		05240487259A179000A36D19 /* UndefinedWarmUps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UndefinedWarmUps.m; sourceTree = "<group>"; };
-		05B39E1C259C8F7D001AC4DB /* CatAnimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatAnimal.h; sourceTree = "<group>"; };
-		05B39E1D259C8F7D001AC4DB /* CatAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatAnimal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		052403B3259A0A0E00A36D19 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		052403C2259A0A2700A36D19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -87,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				052403B8259A0A0E00A36D19 /* ObjcBasics */,
-				052403C6259A0A2700A36D19 /* ObjcBasicsTesting */,
 				052403B7259A0A0E00A36D19 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				052403B6259A0A0E00A36D19 /* ObjcBasics */,
-				052403C5259A0A2700A36D19 /* ObjcBasicsTesting.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,45 +58,10 @@
 		052403B8259A0A0E00A36D19 /* ObjcBasics */ = {
 			isa = PBXGroup;
 			children = (
-				05B39E1C259C8F7D001AC4DB /* CatAnimal.h */,
-				05B39E1D259C8F7D001AC4DB /* CatAnimal.m */,
 				052403DE259A0B5E00A36D19 /* main.cpp */,
 				052403B9259A0A0E00A36D19 /* main.m */,
 			);
 			path = ObjcBasics;
-			sourceTree = "<group>";
-		};
-		052403C6259A0A2700A36D19 /* ObjcBasicsTesting */ = {
-			isa = PBXGroup;
-			children = (
-				05240483259A179000A36D19 /* ARCTesting.m */,
-				05240481259A179000A36D19 /* BlockWarmUps.mm */,
-				05240479259A179000A36D19 /* Category */,
-				05240485259A179000A36D19 /* CategoryWarmUps.m */,
-				05240486259A179000A36D19 /* GCDWarmUps.m */,
-				05240480259A179000A36D19 /* MessagingWarmUps.m */,
-				05240482259A179000A36D19 /* MRCTesting.m */,
-				05240478259A179000A36D19 /* ObjcBasicsTesting.m */,
-				05240484259A179000A36D19 /* ObjcWarmUpsTesting.m */,
-				05240476259A179000A36D19 /* RuntimeWarmUps.mm */,
-				05240477259A179000A36D19 /* SizingWarmUps.mm */,
-				05240487259A179000A36D19 /* UndefinedWarmUps.m */,
-				052403C9259A0A2700A36D19 /* Info.plist */,
-			);
-			path = ObjcBasicsTesting;
-			sourceTree = "<group>";
-		};
-		05240479259A179000A36D19 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				0524047A259A179000A36D19 /* ExistingMultiFileClass+TestingTwo.h */,
-				0524047B259A179000A36D19 /* ExistingMultiFileClass+TestingOne.m */,
-				0524047C259A179000A36D19 /* ExistingMultiFileClass.m */,
-				0524047D259A179000A36D19 /* ExistingMultiFileClass+TestingTwo.m */,
-				0524047E259A179000A36D19 /* ExistingMultiFileClass+TestingOne.h */,
-				0524047F259A179000A36D19 /* ExistingMultiFileClass.h */,
-			);
-			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,23 +85,6 @@
 			productReference = 052403B6259A0A0E00A36D19 /* ObjcBasics */;
 			productType = "com.apple.product-type.tool";
 		};
-		052403C4259A0A2700A36D19 /* ObjcBasicsTesting */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 052403CA259A0A2700A36D19 /* Build configuration list for PBXNativeTarget "ObjcBasicsTesting" */;
-			buildPhases = (
-				052403C1259A0A2700A36D19 /* Sources */,
-				052403C2259A0A2700A36D19 /* Frameworks */,
-				052403C3259A0A2700A36D19 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ObjcBasicsTesting;
-			productName = ObjcBasicsTesting;
-			productReference = 052403C5259A0A2700A36D19 /* ObjcBasicsTesting.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -192,9 +94,6 @@
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					052403B5259A0A0E00A36D19 = {
-						CreatedOnToolsVersion = 12.3;
-					};
-					052403C4259A0A2700A36D19 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -213,20 +112,9 @@
 			projectRoot = "";
 			targets = (
 				052403B5259A0A0E00A36D19 /* ObjcBasics */,
-				052403C4259A0A2700A36D19 /* ObjcBasicsTesting */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		052403C3259A0A2700A36D19 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		052403D3259A0A9500A36D19 /* ShellScript */ = {
@@ -253,30 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B39E1E259C8F7D001AC4DB /* CatAnimal.m in Sources */,
 				052403BA259A0A0E00A36D19 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		052403C1259A0A2700A36D19 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0524048C259A179000A36D19 /* ExistingMultiFileClass.m in Sources */,
-				0524048F259A179000A36D19 /* BlockWarmUps.mm in Sources */,
-				05240492259A179000A36D19 /* ObjcWarmUpsTesting.m in Sources */,
-				05240490259A179000A36D19 /* MRCTesting.m in Sources */,
-				05240494259A179000A36D19 /* GCDWarmUps.m in Sources */,
-				05B39E1F259C8F7D001AC4DB /* CatAnimal.m in Sources */,
-				0524048E259A179000A36D19 /* MessagingWarmUps.m in Sources */,
-				05240495259A179000A36D19 /* UndefinedWarmUps.m in Sources */,
-				0524048D259A179000A36D19 /* ExistingMultiFileClass+TestingTwo.m in Sources */,
-				05240491259A179000A36D19 /* ARCTesting.m in Sources */,
-				05240488259A179000A36D19 /* RuntimeWarmUps.mm in Sources */,
-				0524048B259A179000A36D19 /* ExistingMultiFileClass+TestingOne.m in Sources */,
-				05240493259A179000A36D19 /* CategoryWarmUps.m in Sources */,
-				05240489259A179000A36D19 /* SizingWarmUps.mm in Sources */,
-				0524048A259A179000A36D19 /* ObjcBasicsTesting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,40 +277,6 @@
 			};
 			name = Release;
 		};
-		052403CB259A0A2700A36D19 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ObjcBasicsTesting/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = mogoal.ObjcBasicsTesting;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		052403CC259A0A2700A36D19 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ObjcBasicsTesting/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = mogoal.ObjcBasicsTesting;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -463,15 +294,6 @@
 			buildConfigurations = (
 				052403BE259A0A0E00A36D19 /* Debug */,
 				052403BF259A0A0E00A36D19 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		052403CA259A0A2700A36D19 /* Build configuration list for PBXNativeTarget "ObjcBasicsTesting" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				052403CB259A0A2700A36D19 /* Debug */,
-				052403CC259A0A2700A36D19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

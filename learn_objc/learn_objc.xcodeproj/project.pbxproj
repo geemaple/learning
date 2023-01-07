@@ -8,11 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		DC4763F1296951FB005D1EDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4763F0296951FB005D1EDE /* main.m */; };
-		DC4763FB296952CC005D1EDE /* CatAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4763FA296952CC005D1EDE /* CatAnimal.m */; };
+		DC47640329695564005D1EDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47640229695564005D1EDE /* main.m */; };
+		DC47643029695A0D005D1EDE /* BlockWarmUps.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC47641E29695A0D005D1EDE /* BlockWarmUps.mm */; };
+		DC47643129695A0D005D1EDE /* SizingWarmUps.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC47641F29695A0D005D1EDE /* SizingWarmUps.mm */; };
+		DC47643229695A0D005D1EDE /* CategoryWarmUps.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642029695A0D005D1EDE /* CategoryWarmUps.m */; };
+		DC47643329695A0D005D1EDE /* UndefinedWarmUps.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642129695A0D005D1EDE /* UndefinedWarmUps.m */; };
+		DC47643429695A0D005D1EDE /* MRCTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642229695A0D005D1EDE /* MRCTesting.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DC47643529695A0D005D1EDE /* GCDWarmUps.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642329695A0D005D1EDE /* GCDWarmUps.m */; };
+		DC47643629695A0D005D1EDE /* ObjcBasicsTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642429695A0D005D1EDE /* ObjcBasicsTesting.m */; };
+		DC47643729695A0D005D1EDE /* RuntimeWarmUps.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC47642529695A0D005D1EDE /* RuntimeWarmUps.mm */; };
+		DC47643829695A0D005D1EDE /* ARCTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642629695A0D005D1EDE /* ARCTesting.m */; };
+		DC47643929695A0D005D1EDE /* MessagingWarmUps.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642729695A0D005D1EDE /* MessagingWarmUps.m */; };
+		DC47643A29695A0D005D1EDE /* ObjcWarmUpsTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642829695A0D005D1EDE /* ObjcWarmUpsTesting.m */; };
+		DC47643B29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642B29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.m */; };
+		DC47643C29695A0D005D1EDE /* ExistingMultiFileClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642C29695A0D005D1EDE /* ExistingMultiFileClass.m */; };
+		DC47643D29695A0D005D1EDE /* ExistingMultiFileClass+TestingTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642D29695A0D005D1EDE /* ExistingMultiFileClass+TestingTwo.m */; };
+		DC47644929695BF3005D1EDE /* CatAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47644729695BF3005D1EDE /* CatAnimal.m */; };
+		DC47644A29695BF3005D1EDE /* CatAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47644729695BF3005D1EDE /* CatAnimal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		DC4763EC296951FB005D1EDE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		DC4763FE29695564005D1EDE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -26,12 +51,46 @@
 /* Begin PBXFileReference section */
 		DC4763EE296951FB005D1EDE /* class_object */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = class_object; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4763F0296951FB005D1EDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DC4763F9296952CC005D1EDE /* CatAnimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatAnimal.h; sourceTree = "<group>"; };
-		DC4763FA296952CC005D1EDE /* CatAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatAnimal.m; sourceTree = "<group>"; };
+		DC47640029695564005D1EDE /* block */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = block; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC47640229695564005D1EDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC4764172969594C005D1EDE /* unit_test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unit_test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC47641E29695A0D005D1EDE /* BlockWarmUps.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BlockWarmUps.mm; sourceTree = "<group>"; };
+		DC47641F29695A0D005D1EDE /* SizingWarmUps.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SizingWarmUps.mm; sourceTree = "<group>"; };
+		DC47642029695A0D005D1EDE /* CategoryWarmUps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryWarmUps.m; sourceTree = "<group>"; };
+		DC47642129695A0D005D1EDE /* UndefinedWarmUps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UndefinedWarmUps.m; sourceTree = "<group>"; };
+		DC47642229695A0D005D1EDE /* MRCTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCTesting.m; sourceTree = "<group>"; };
+		DC47642329695A0D005D1EDE /* GCDWarmUps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWarmUps.m; sourceTree = "<group>"; };
+		DC47642429695A0D005D1EDE /* ObjcBasicsTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcBasicsTesting.m; sourceTree = "<group>"; };
+		DC47642529695A0D005D1EDE /* RuntimeWarmUps.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RuntimeWarmUps.mm; sourceTree = "<group>"; };
+		DC47642629695A0D005D1EDE /* ARCTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCTesting.m; sourceTree = "<group>"; };
+		DC47642729695A0D005D1EDE /* MessagingWarmUps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingWarmUps.m; sourceTree = "<group>"; };
+		DC47642829695A0D005D1EDE /* ObjcWarmUpsTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcWarmUpsTesting.m; sourceTree = "<group>"; };
+		DC47642A29695A0D005D1EDE /* ExistingMultiFileClass+TestingTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExistingMultiFileClass+TestingTwo.h"; sourceTree = "<group>"; };
+		DC47642B29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExistingMultiFileClass+TestingOne.m"; sourceTree = "<group>"; };
+		DC47642C29695A0D005D1EDE /* ExistingMultiFileClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExistingMultiFileClass.m; sourceTree = "<group>"; };
+		DC47642D29695A0D005D1EDE /* ExistingMultiFileClass+TestingTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExistingMultiFileClass+TestingTwo.m"; sourceTree = "<group>"; };
+		DC47642E29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExistingMultiFileClass+TestingOne.h"; sourceTree = "<group>"; };
+		DC47642F29695A0D005D1EDE /* ExistingMultiFileClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExistingMultiFileClass.h; sourceTree = "<group>"; };
+		DC47644729695BF3005D1EDE /* CatAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatAnimal.m; sourceTree = "<group>"; };
+		DC47644829695BF3005D1EDE /* CatAnimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatAnimal.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DC4763EB296951FB005D1EDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC4763FD29695564005D1EDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC4764142969594C005D1EDE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,7 +103,10 @@
 		DC4763D72969519D005D1EDE = {
 			isa = PBXGroup;
 			children = (
+				DC47644629695BF3005D1EDE /* shared */,
 				DC4763EF296951FB005D1EDE /* class_object */,
+				DC47640129695564005D1EDE /* block */,
+				DC4764182969594C005D1EDE /* unit_test */,
 				DC4763E12969519D005D1EDE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				DC4763EE296951FB005D1EDE /* class_object */,
+				DC47640029695564005D1EDE /* block */,
+				DC4764172969594C005D1EDE /* unit_test.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,11 +124,58 @@
 		DC4763EF296951FB005D1EDE /* class_object */ = {
 			isa = PBXGroup;
 			children = (
-				DC4763F9296952CC005D1EDE /* CatAnimal.h */,
-				DC4763FA296952CC005D1EDE /* CatAnimal.m */,
 				DC4763F0296951FB005D1EDE /* main.m */,
 			);
 			path = class_object;
+			sourceTree = "<group>";
+		};
+		DC47640129695564005D1EDE /* block */ = {
+			isa = PBXGroup;
+			children = (
+				DC47640229695564005D1EDE /* main.m */,
+			);
+			path = block;
+			sourceTree = "<group>";
+		};
+		DC4764182969594C005D1EDE /* unit_test */ = {
+			isa = PBXGroup;
+			children = (
+				DC47642629695A0D005D1EDE /* ARCTesting.m */,
+				DC47641E29695A0D005D1EDE /* BlockWarmUps.mm */,
+				DC47642929695A0D005D1EDE /* Category */,
+				DC47642029695A0D005D1EDE /* CategoryWarmUps.m */,
+				DC47642329695A0D005D1EDE /* GCDWarmUps.m */,
+				DC47642729695A0D005D1EDE /* MessagingWarmUps.m */,
+				DC47642229695A0D005D1EDE /* MRCTesting.m */,
+				DC47642429695A0D005D1EDE /* ObjcBasicsTesting.m */,
+				DC47642829695A0D005D1EDE /* ObjcWarmUpsTesting.m */,
+				DC47642529695A0D005D1EDE /* RuntimeWarmUps.mm */,
+				DC47641F29695A0D005D1EDE /* SizingWarmUps.mm */,
+				DC47642129695A0D005D1EDE /* UndefinedWarmUps.m */,
+			);
+			path = unit_test;
+			sourceTree = "<group>";
+		};
+		DC47642929695A0D005D1EDE /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DC47642A29695A0D005D1EDE /* ExistingMultiFileClass+TestingTwo.h */,
+				DC47642B29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.m */,
+				DC47642C29695A0D005D1EDE /* ExistingMultiFileClass.m */,
+				DC47642D29695A0D005D1EDE /* ExistingMultiFileClass+TestingTwo.m */,
+				DC47642E29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.h */,
+				DC47642F29695A0D005D1EDE /* ExistingMultiFileClass.h */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		DC47644629695BF3005D1EDE /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				DC47644729695BF3005D1EDE /* CatAnimal.m */,
+				DC47644829695BF3005D1EDE /* CatAnimal.h */,
+			);
+			path = shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +199,41 @@
 			productReference = DC4763EE296951FB005D1EDE /* class_object */;
 			productType = "com.apple.product-type.tool";
 		};
+		DC4763FF29695564005D1EDE /* block */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC47640629695564005D1EDE /* Build configuration list for PBXNativeTarget "block" */;
+			buildPhases = (
+				DC4763FC29695564005D1EDE /* Sources */,
+				DC4763FD29695564005D1EDE /* Frameworks */,
+				DC4763FE29695564005D1EDE /* CopyFiles */,
+				DC476407296956D8005D1EDE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = block;
+			productName = block;
+			productReference = DC47640029695564005D1EDE /* block */;
+			productType = "com.apple.product-type.tool";
+		};
+		DC4764162969594C005D1EDE /* unit_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC47641B2969594C005D1EDE /* Build configuration list for PBXNativeTarget "unit_test" */;
+			buildPhases = (
+				DC4764132969594C005D1EDE /* Sources */,
+				DC4764142969594C005D1EDE /* Frameworks */,
+				DC4764152969594C005D1EDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = unit_test;
+			productName = unit_test;
+			productReference = DC4764172969594C005D1EDE /* unit_test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +244,12 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					DC4763ED296951FB005D1EDE = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					DC4763FF29695564005D1EDE = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					DC4764162969594C005D1EDE = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -116,9 +268,21 @@
 			projectRoot = "";
 			targets = (
 				DC4763ED296951FB005D1EDE /* class_object */,
+				DC4763FF29695564005D1EDE /* block */,
+				DC4764162969594C005D1EDE /* unit_test */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC4764152969594C005D1EDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		DC4763F829695279005D1EDE /* ShellScript */ = {
@@ -138,6 +302,23 @@
 			shellPath = /bin/sh;
 			shellScript = "clang -rewrite-objc $SRCROOT/class_object/main.m -o $SRCROOT/class_object/clang_rewrite_main.cpp\n";
 		};
+		DC476407296956D8005D1EDE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "clang -rewrite-objc $SRCROOT/block/main.m -o $SRCROOT/block/clang_rewrite_main.cpp\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -145,8 +326,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC4763FB296952CC005D1EDE /* CatAnimal.m in Sources */,
+				DC47644929695BF3005D1EDE /* CatAnimal.m in Sources */,
 				DC4763F1296951FB005D1EDE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC4763FC29695564005D1EDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC47640329695564005D1EDE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC4764132969594C005D1EDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC47643729695A0D005D1EDE /* RuntimeWarmUps.mm in Sources */,
+				DC47643529695A0D005D1EDE /* GCDWarmUps.m in Sources */,
+				DC47643929695A0D005D1EDE /* MessagingWarmUps.m in Sources */,
+				DC47643129695A0D005D1EDE /* SizingWarmUps.mm in Sources */,
+				DC47643329695A0D005D1EDE /* UndefinedWarmUps.m in Sources */,
+				DC47644A29695BF3005D1EDE /* CatAnimal.m in Sources */,
+				DC47643C29695A0D005D1EDE /* ExistingMultiFileClass.m in Sources */,
+				DC47643229695A0D005D1EDE /* CategoryWarmUps.m in Sources */,
+				DC47643D29695A0D005D1EDE /* ExistingMultiFileClass+TestingTwo.m in Sources */,
+				DC47643A29695A0D005D1EDE /* ObjcWarmUpsTesting.m in Sources */,
+				DC47643829695A0D005D1EDE /* ARCTesting.m in Sources */,
+				DC47643B29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.m in Sources */,
+				DC47643029695A0D005D1EDE /* BlockWarmUps.mm in Sources */,
+				DC47643429695A0D005D1EDE /* MRCTesting.m in Sources */,
+				DC47643629695A0D005D1EDE /* ObjcBasicsTesting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +489,48 @@
 			};
 			name = Release;
 		};
+		DC47640429695564005D1EDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC47640529695564005D1EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DC47641C2969594C005D1EDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mogoal.unit-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Debug;
+		};
+		DC47641D2969594C005D1EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mogoal.unit-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -295,6 +548,24 @@
 			buildConfigurations = (
 				DC4763F3296951FB005D1EDE /* Debug */,
 				DC4763F4296951FB005D1EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC47640629695564005D1EDE /* Build configuration list for PBXNativeTarget "block" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC47640429695564005D1EDE /* Debug */,
+				DC47640529695564005D1EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC47641B2969594C005D1EDE /* Build configuration list for PBXNativeTarget "unit_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC47641C2969594C005D1EDE /* Debug */,
+				DC47641D2969594C005D1EDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

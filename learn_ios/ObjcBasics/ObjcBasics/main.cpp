@@ -106,19 +106,19 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%lu",3};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%p",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%lu",3};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"weak_obj1-%@",12};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_4 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",32};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_5 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%p",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_6 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%lu",3};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_7 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"weak_obj2-%@",12};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_8 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",32};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_9 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%p",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_10 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%lu",3};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_11 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"obj0-3-%@",9};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_12 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",32};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%lu",3};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%p",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%lu",3};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"weak_obj1-%@",12};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_4 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",32};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_5 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%p",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_6 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%lu",3};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_7 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"weak_obj2-%@",12};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_8 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",32};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_9 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%p",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_10 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%lu",3};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_11 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"obj0-3-%@",9};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_12 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",32};
 typedef signed char __int8_t;
 typedef unsigned char __uint8_t;
 typedef short __int16_t;
@@ -62949,34 +62949,34 @@ int main(int argc, const char * argv[]) {
         id __attribute__((objc_ownership(weak))) weak_obj1;
         {
             id obj1 = ((NSMutableArray *(*)(id, SEL))(void *)objc_msgSend)((id)((NSMutableArray *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSMutableArray"), sel_registerName("alloc")), sel_registerName("init"));
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_0, _objc_rootRetainCount(obj1));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_0, _objc_rootRetainCount(obj1));
             weak_obj1 = obj1;
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_1, weak_obj1);
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_2, _objc_rootRetainCount(weak_obj1));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_1, weak_obj1);
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_2, _objc_rootRetainCount(weak_obj1));
             _objc_autoreleasePoolPrint();
         }
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_3, weak_obj1);
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_4);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_3, weak_obj1);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_4);
         id __attribute__((objc_ownership(weak))) weak_obj2;
         {
             id obj1 = ((NSMutableArray * _Nonnull (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSMutableArray"), sel_registerName("array"));
             weak_obj2 = obj1;
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_5, weak_obj2);
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_6, _objc_rootRetainCount(weak_obj2));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_5, weak_obj2);
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_6, _objc_rootRetainCount(weak_obj2));
             _objc_autoreleasePoolPrint();
         }
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_7, weak_obj2);
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_8);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_7, weak_obj2);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_8);
         id __attribute__((objc_ownership(weak))) weak_obj3;
         /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
             id obj3 = ((NSMutableArray * _Nonnull (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSMutableArray"), sel_registerName("array"));
             weak_obj3 = obj3;
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_9, weak_obj3);
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_10, _objc_rootRetainCount(weak_obj3));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_9, weak_obj3);
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_10, _objc_rootRetainCount(weak_obj3));
             _objc_autoreleasePoolPrint();
         }
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_11, weak_obj3);
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_58b54c_mi_12);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_11, weak_obj3);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_ck_b_rlbz_91mg1c7crh_m5ryl80000gn_T_main_1ce966_mi_12);
     }
     return 0;
 }

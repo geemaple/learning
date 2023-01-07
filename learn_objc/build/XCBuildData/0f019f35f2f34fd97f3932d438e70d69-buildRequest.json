@@ -1,0 +1,50 @@
+{
+  "_buildCommand2" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "a3a696b443d304fae3afce5001ca060814024ea1b2f8cadba5765767a16efcbe"
+    },
+    {
+      "guid" : "a3a696b443d304fae3afce5001ca0608f2ab77ca42dcc49a50dcf928ce8e35dc"
+    },
+    {
+      "guid" : "a3a696b443d304fae3afce5001ca0608fd390eb4dbed0f68bc82a82d100da33d"
+    },
+    {
+      "guid" : "a3a696b443d304fae3afce5001ca060814024ea1b2f8cadba5765767a16efcbe"
+    }
+  ],
+  "containerPath" : "/Users/Felix/Developer/learning/learn_objc/learn_objc.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "COLOR_DIAGNOSTICS" : "YES",
+          "diagnostic_message_length" : "179",
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : false,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
