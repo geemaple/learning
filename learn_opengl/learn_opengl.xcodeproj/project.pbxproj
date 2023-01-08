@@ -14,6 +14,7 @@
 		DC4764762969714C005D1EDE /* lesson_03_rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764742969714C005D1EDE /* lesson_03_rectangle.cpp */; };
 		DC47647A2969D951005D1EDE /* opengl_graphic_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764782969D951005D1EDE /* opengl_graphic_window.cpp */; };
 		DC47647D2969DB2B005D1EDE /* opengl_glsl_lang.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC47647B2969DB2B005D1EDE /* opengl_glsl_lang.cpp */; };
+		DC476480296A562C005D1EDE /* lesson_04_vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC47647E296A562C005D1EDE /* lesson_04_vertex.cpp */; };
 		DCF4B4AE2966C7CA000F4107 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EAB2966B905006773FA /* libglfw3.a */; };
 		DCF4B4AF2966C874000F4107 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EAE2966BA23006773FA /* Cocoa.framework */; };
 		DCF4B4B02966C87F000F4107 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EB02966BA84006773FA /* IOKit.framework */; };
@@ -49,6 +50,8 @@
 		DC4764792969D951005D1EDE /* opengl_graphic_window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = opengl_graphic_window.hpp; sourceTree = "<group>"; };
 		DC47647B2969DB2B005D1EDE /* opengl_glsl_lang.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = opengl_glsl_lang.cpp; sourceTree = "<group>"; };
 		DC47647C2969DB2B005D1EDE /* opengl_glsl_lang.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = opengl_glsl_lang.hpp; sourceTree = "<group>"; };
+		DC47647E296A562C005D1EDE /* lesson_04_vertex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_04_vertex.cpp; sourceTree = "<group>"; };
+		DC47647F296A562C005D1EDE /* lesson_04_vertex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_04_vertex.hpp; sourceTree = "<group>"; };
 		DCF4B4B72966D017000F4107 /* lesson_01_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_01_window.cpp; sourceTree = "<group>"; };
 		DCF4B4B82966D017000F4107 /* lesson_01_window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lesson_01_window.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +171,8 @@
 				DC4763932967E588005D1EDE /* lesson_02_triangle.hpp */,
 				DC4764742969714C005D1EDE /* lesson_03_rectangle.cpp */,
 				DC4764752969714C005D1EDE /* lesson_03_rectangle.hpp */,
+				DC47647E296A562C005D1EDE /* lesson_04_vertex.cpp */,
+				DC47647F296A562C005D1EDE /* lesson_04_vertex.hpp */,
 			);
 			path = lesson;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				050CB33629665AB9005A1946 /* main.cpp in Sources */,
+				DC476480296A562C005D1EDE /* lesson_04_vertex.cpp in Sources */,
 				DCF4B4B92966D017000F4107 /* lesson_01_window.cpp in Sources */,
 				05831EAC2966B905006773FA /* glad.c in Sources */,
 				DC4764762969714C005D1EDE /* lesson_03_rectangle.cpp in Sources */,

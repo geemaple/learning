@@ -10,6 +10,7 @@
 #include "lesson_01_window.hpp"
 #include "lesson_02_triangle.hpp"
 #include "lesson_03_rectangle.hpp"
+#include "lesson_04_vertex.hpp"
 
 int main(void) {
     bool quit = false;
@@ -30,6 +31,9 @@ int main(void) {
                 break;
             case 3:
                 Lesson03::entry();
+                break;
+            case 4:
+                Lesson04::entry();
                 break;
         }
     }
