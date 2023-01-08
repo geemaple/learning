@@ -15,6 +15,10 @@
 		DC47647A2969D951005D1EDE /* opengl_graphic_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764782969D951005D1EDE /* opengl_graphic_window.cpp */; };
 		DC47647D2969DB2B005D1EDE /* opengl_glsl_lang.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC47647B2969DB2B005D1EDE /* opengl_glsl_lang.cpp */; };
 		DC476480296A562C005D1EDE /* lesson_04_vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC47647E296A562C005D1EDE /* lesson_04_vertex.cpp */; };
+		DC476483296A75D1005D1EDE /* lesson_05_texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC476481296A75D1005D1EDE /* lesson_05_texture.cpp */; };
+		DC4764D2296A9144005D1EDE /* wall.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC4764D1296A913F005D1EDE /* wall.jpg */; };
+		DC4764D6296A9B4D005D1EDE /* lesson5_frament.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC4764D5296A9B22005D1EDE /* lesson5_frament.glsl */; };
+		DC4764D7296A9B4D005D1EDE /* lesson5_vertex.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC4764D4296A9AE2005D1EDE /* lesson5_vertex.glsl */; };
 		DCF4B4AE2966C7CA000F4107 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EAB2966B905006773FA /* libglfw3.a */; };
 		DCF4B4AF2966C874000F4107 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EAE2966BA23006773FA /* Cocoa.framework */; };
 		DCF4B4B02966C87F000F4107 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EB02966BA84006773FA /* IOKit.framework */; };
@@ -24,12 +28,15 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		050CB33029665AB9005A1946 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 12;
+			dstPath = $BUILT_PRODUCTS_DIR;
 			dstSubfolderSpec = 0;
 			files = (
+				DC4764D6296A9B4D005D1EDE /* lesson5_frament.glsl in CopyFiles */,
+				DC4764D7296A9B4D005D1EDE /* lesson5_vertex.glsl in CopyFiles */,
+				DC4764D2296A9144005D1EDE /* wall.jpg in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -52,6 +59,11 @@
 		DC47647C2969DB2B005D1EDE /* opengl_glsl_lang.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = opengl_glsl_lang.hpp; sourceTree = "<group>"; };
 		DC47647E296A562C005D1EDE /* lesson_04_vertex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_04_vertex.cpp; sourceTree = "<group>"; };
 		DC47647F296A562C005D1EDE /* lesson_04_vertex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_04_vertex.hpp; sourceTree = "<group>"; };
+		DC476481296A75D1005D1EDE /* lesson_05_texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_05_texture.cpp; sourceTree = "<group>"; };
+		DC476482296A75D1005D1EDE /* lesson_05_texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_05_texture.hpp; sourceTree = "<group>"; };
+		DC4764D1296A913F005D1EDE /* wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall.jpg; sourceTree = "<group>"; };
+		DC4764D4296A9AE2005D1EDE /* lesson5_vertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = lesson5_vertex.glsl; sourceTree = "<group>"; };
+		DC4764D5296A9B22005D1EDE /* lesson5_frament.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = lesson5_frament.glsl; sourceTree = "<group>"; };
 		DCF4B4B72966D017000F4107 /* lesson_01_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_01_window.cpp; sourceTree = "<group>"; };
 		DCF4B4B82966D017000F4107 /* lesson_01_window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lesson_01_window.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +86,7 @@
 		050CB32929665AB9005A1946 = {
 			isa = PBXGroup;
 			children = (
+				DC4764D0296A913F005D1EDE /* resources */,
 				05831E942966B905006773FA /* lib */,
 				050CB33429665AB9005A1946 /* learn_opengl */,
 				050CB33329665AB9005A1946 /* Products */,
@@ -92,6 +105,7 @@
 		050CB33429665AB9005A1946 /* learn_opengl */ = {
 			isa = PBXGroup;
 			children = (
+				DC4764D3296A9A98005D1EDE /* glsl */,
 				DC4764772969D930005D1EDE /* shared */,
 				DCF4B4B62966D017000F4107 /* lesson */,
 				050CB33529665AB9005A1946 /* main.cpp */,
@@ -162,6 +176,24 @@
 			path = shared;
 			sourceTree = "<group>";
 		};
+		DC4764D0296A913F005D1EDE /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				DC4764D1296A913F005D1EDE /* wall.jpg */,
+			);
+			name = resources;
+			path = learn_opengl/resources;
+			sourceTree = "<group>";
+		};
+		DC4764D3296A9A98005D1EDE /* glsl */ = {
+			isa = PBXGroup;
+			children = (
+				DC4764D5296A9B22005D1EDE /* lesson5_frament.glsl */,
+				DC4764D4296A9AE2005D1EDE /* lesson5_vertex.glsl */,
+			);
+			path = glsl;
+			sourceTree = "<group>";
+		};
 		DCF4B4B62966D017000F4107 /* lesson */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +205,8 @@
 				DC4764752969714C005D1EDE /* lesson_03_rectangle.hpp */,
 				DC47647E296A562C005D1EDE /* lesson_04_vertex.cpp */,
 				DC47647F296A562C005D1EDE /* lesson_04_vertex.hpp */,
+				DC476481296A75D1005D1EDE /* lesson_05_texture.cpp */,
+				DC476482296A75D1005D1EDE /* lesson_05_texture.hpp */,
 			);
 			path = lesson;
 			sourceTree = "<group>";
@@ -234,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC476483296A75D1005D1EDE /* lesson_05_texture.cpp in Sources */,
 				050CB33629665AB9005A1946 /* main.cpp in Sources */,
 				DC476480296A562C005D1EDE /* lesson_04_vertex.cpp in Sources */,
 				DCF4B4B92966D017000F4107 /* lesson_01_window.cpp in Sources */,

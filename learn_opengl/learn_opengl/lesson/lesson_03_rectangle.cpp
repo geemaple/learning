@@ -27,7 +27,7 @@ int Lesson03::entry(void) {
     
     // create window
     GLFWwindow* window = createGraphicWindow("OpenGL Lesson 03", 800, 600);
-    query_vertex_shader_input_limit();
+    queryVertexShaderInputLimit();
     
     float vertices[] = {
          0.5f,  0.5f, 0.0f,  // top right
@@ -67,7 +67,7 @@ int Lesson03::entry(void) {
     
     GLenum types[] = {GL_VERTEX_SHADER, GL_FRAGMENT_SHADER};
     const GLchar* codes[] = {vertexShaderSource, fragmentShaderSource};
-    GLuint shaderProgram = createShaderProgram(types, codes, 2);
+    GLuint shaderProgram = shaderProgramFromSource(types, codes, 2);
     
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     // render loop, each iteration is called a frame

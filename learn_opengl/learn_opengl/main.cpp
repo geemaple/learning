@@ -11,6 +11,7 @@
 #include "lesson_02_triangle.hpp"
 #include "lesson_03_rectangle.hpp"
 #include "lesson_04_vertex.hpp"
+#include "lesson_05_texture.hpp"
 
 int main(void) {
     bool quit = false;
@@ -19,6 +20,7 @@ int main(void) {
         std::cout << "Enter lesson number:, quit with 0" << std::endl;
         std::cin >> number;
         std::cin.clear();
+        std::cin.ignore(10000, '\n');
         switch (number) {
             case 0:
                 quit = true;
@@ -34,6 +36,9 @@ int main(void) {
                 break;
             case 4:
                 Lesson04::entry();
+                break;
+            case 5:
+                Lesson05::entry();
                 break;
         }
     }

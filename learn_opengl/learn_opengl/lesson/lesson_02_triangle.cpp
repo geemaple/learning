@@ -55,7 +55,7 @@ int Lesson02::entry(void) {
 
     GLenum types[] = {GL_VERTEX_SHADER, GL_FRAGMENT_SHADER};
     const GLchar* codes[] = {vertexShaderSource, fragmentShaderSource};
-    GLuint shaderProgram = createShaderProgram(types, codes, 2);
+    GLuint shaderProgram = shaderProgramFromSource(types, codes, 2);
     
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     // render loop, each iteration is called a frame

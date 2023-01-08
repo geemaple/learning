@@ -10,12 +10,16 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <fstream>
+#include <sstream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <cmath>
 
-void query_vertex_shader_input_limit();
+void queryVertexShaderInputLimit();
 
-GLuint createShaderProgram(GLenum types[], const GLchar* codes[], int count);
+GLuint shaderProgramFromFile(GLenum types[], const GLchar* paths[], int count);
+
+GLuint shaderProgramFromSource(GLenum types[], const GLchar* codes[], int count);
 
 #endif /* opengl_glsl_lang_hpp */

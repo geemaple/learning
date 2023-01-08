@@ -7,15 +7,15 @@
 
 #include "opengl_glsl_lang.hpp"
 
-void query_vertex_shader_input_limit() {
+void queryVertexShaderInputLimit() {
     int nrAttributes;
     glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &nrAttributes);
     std::cout << "Maximum nr of vertex attributes supported: " << nrAttributes << std::endl;
 }
 
-unsigned int comipleShader(GLenum shaderType, const GLchar *code) {
+GLuint comipleShader(GLenum shaderType, const GLchar *code) {
     // shader
-    unsigned int shader = glCreateShader(shaderType);
+    GLuint shader = glCreateShader(shaderType);
     
     // compile
     glShaderSource(shader, 1, &code, NULL);
@@ -26,6 +26,7 @@ unsigned int comipleShader(GLenum shaderType, const GLchar *code) {
     glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
     if(!success)
     {
+        std::cout << shaderType << std::endl << code << std::endl;
         glGetShaderInfoLog(shader, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::COMPILATION_FAILED\n" << infoLog << std::endl;
     }
@@ -33,13 +34,7 @@ unsigned int comipleShader(GLenum shaderType, const GLchar *code) {
     return shader;
 }
 
-GLuint createShaderProgram(GLenum types[], const GLchar* codes[], int count) {
-
-    GLuint shaders[count];
-    for (int i = 0; i < count; ++i) {
-        shaders[i] = comipleShader(types[i], codes[i]);
-    }
-
+GLuint linkProgramFrom(GLuint shaders[], int count) {
     // create shader program
     unsigned int shaderProgram;
     shaderProgram = glCreateProgram();
@@ -63,4 +58,41 @@ GLuint createShaderProgram(GLenum types[], const GLchar* codes[], int count) {
     }
     
     return shaderProgram;
+}
+
+GLuint shaderProgramFromFile(GLenum types[], const GLchar* paths[], int count) {
+    std::string codes[count];
+    
+    for (int i = 0; i < count; ++i) {
+        std::string source;
+        std::stringstream glslStream;
+        std::ifstream fileStream;
+        fileStream.exceptions (std::ifstream::failbit | std::ifstream::badbit);
+        try {
+            fileStream.open(paths[i]);
+            glslStream << fileStream.rdbuf();
+            fileStream.close();
+            
+            codes[i] = glslStream.str();
+        } catch (std::ifstream::failure& e) {
+            std::cout << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ: " << e.what() << std::endl;
+        }
+    }
+    
+    GLuint shaders[count];
+    for (int i = 0; i < count; ++i) {
+        shaders[i] = comipleShader(types[i], codes[i].c_str());
+    }
+    
+    return linkProgramFrom(shaders, count);
+}
+
+GLuint shaderProgramFromSource(GLenum types[], const GLchar* codes[], int count) {
+
+    GLuint shaders[count];
+    for (int i = 0; i < count; ++i) {
+        shaders[i] = comipleShader(types[i], codes[i]);
+    }
+
+    return linkProgramFrom(shaders, count);
 }
