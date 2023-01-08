@@ -19,6 +19,7 @@
 		DC4764D2296A9144005D1EDE /* wall.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC4764D1296A913F005D1EDE /* wall.jpg */; };
 		DC4764D6296A9B4D005D1EDE /* lesson5_frament.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC4764D5296A9B22005D1EDE /* lesson5_frament.glsl */; };
 		DC4764D7296A9B4D005D1EDE /* lesson5_vertex.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC4764D4296A9AE2005D1EDE /* lesson5_vertex.glsl */; };
+		DC4764D9296AB291005D1EDE /* awesomeface.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC4764D8296AB1CA005D1EDE /* awesomeface.png */; };
 		DCF4B4AE2966C7CA000F4107 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EAB2966B905006773FA /* libglfw3.a */; };
 		DCF4B4AF2966C874000F4107 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EAE2966BA23006773FA /* Cocoa.framework */; };
 		DCF4B4B02966C87F000F4107 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EB02966BA84006773FA /* IOKit.framework */; };
@@ -32,6 +33,7 @@
 			dstPath = $BUILT_PRODUCTS_DIR;
 			dstSubfolderSpec = 0;
 			files = (
+				DC4764D9296AB291005D1EDE /* awesomeface.png in CopyFiles */,
 				DC4764D6296A9B4D005D1EDE /* lesson5_frament.glsl in CopyFiles */,
 				DC4764D7296A9B4D005D1EDE /* lesson5_vertex.glsl in CopyFiles */,
 				DC4764D2296A9144005D1EDE /* wall.jpg in CopyFiles */,
@@ -64,6 +66,7 @@
 		DC4764D1296A913F005D1EDE /* wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall.jpg; sourceTree = "<group>"; };
 		DC4764D4296A9AE2005D1EDE /* lesson5_vertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = lesson5_vertex.glsl; sourceTree = "<group>"; };
 		DC4764D5296A9B22005D1EDE /* lesson5_frament.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = lesson5_frament.glsl; sourceTree = "<group>"; };
+		DC4764D8296AB1CA005D1EDE /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
 		DCF4B4B72966D017000F4107 /* lesson_01_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_01_window.cpp; sourceTree = "<group>"; };
 		DCF4B4B82966D017000F4107 /* lesson_01_window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lesson_01_window.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +182,7 @@
 		DC4764D0296A913F005D1EDE /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				DC4764D8296AB1CA005D1EDE /* awesomeface.png */,
 				DC4764D1296A913F005D1EDE /* wall.jpg */,
 			);
 			name = resources;
@@ -221,6 +225,7 @@
 				050CB32E29665AB9005A1946 /* Sources */,
 				050CB32F29665AB9005A1946 /* Frameworks */,
 				050CB33029665AB9005A1946 /* CopyFiles */,
+				DC4764DA296AB6C5005D1EDE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -262,6 +267,26 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DC4764DA296AB6C5005D1EDE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"run script\"\necho $BUILT_PRODUCTS_DIR\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		050CB32E29665AB9005A1946 /* Sources */ = {
