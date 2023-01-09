@@ -12,6 +12,7 @@
 #include "lesson_03_rectangle.hpp"
 #include "lesson_04_vertex.hpp"
 #include "lesson_05_texture.hpp"
+#include "lesson_06_transform.hpp"
 
 int main(void) {
     bool quit = false;
@@ -39,6 +40,9 @@ int main(void) {
                 break;
             case 5:
                 Lesson05::entry();
+                break;
+            case 6:
+                Lesson06::entry();
                 break;
         }
     }

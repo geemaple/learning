@@ -16,10 +16,7 @@
 		DC47647D2969DB2B005D1EDE /* opengl_glsl_lang.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC47647B2969DB2B005D1EDE /* opengl_glsl_lang.cpp */; };
 		DC476480296A562C005D1EDE /* lesson_04_vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC47647E296A562C005D1EDE /* lesson_04_vertex.cpp */; };
 		DC476483296A75D1005D1EDE /* lesson_05_texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC476481296A75D1005D1EDE /* lesson_05_texture.cpp */; };
-		DC4764D2296A9144005D1EDE /* wall.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC4764D1296A913F005D1EDE /* wall.jpg */; };
-		DC4764D6296A9B4D005D1EDE /* lesson5_frament.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC4764D5296A9B22005D1EDE /* lesson5_frament.glsl */; };
-		DC4764D7296A9B4D005D1EDE /* lesson5_vertex.glsl in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC4764D4296A9AE2005D1EDE /* lesson5_vertex.glsl */; };
-		DC4764D9296AB291005D1EDE /* awesomeface.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC4764D8296AB1CA005D1EDE /* awesomeface.png */; };
+		DC4764DD296BDB47005D1EDE /* lesson_06_transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764DB296BDB47005D1EDE /* lesson_06_transform.cpp */; };
 		DCF4B4AE2966C7CA000F4107 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EAB2966B905006773FA /* libglfw3.a */; };
 		DCF4B4AF2966C874000F4107 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EAE2966BA23006773FA /* Cocoa.framework */; };
 		DCF4B4B02966C87F000F4107 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EB02966BA84006773FA /* IOKit.framework */; };
@@ -33,10 +30,6 @@
 			dstPath = $BUILT_PRODUCTS_DIR;
 			dstSubfolderSpec = 0;
 			files = (
-				DC4764D9296AB291005D1EDE /* awesomeface.png in CopyFiles */,
-				DC4764D6296A9B4D005D1EDE /* lesson5_frament.glsl in CopyFiles */,
-				DC4764D7296A9B4D005D1EDE /* lesson5_vertex.glsl in CopyFiles */,
-				DC4764D2296A9144005D1EDE /* wall.jpg in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +60,10 @@
 		DC4764D4296A9AE2005D1EDE /* lesson5_vertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = lesson5_vertex.glsl; sourceTree = "<group>"; };
 		DC4764D5296A9B22005D1EDE /* lesson5_frament.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = lesson5_frament.glsl; sourceTree = "<group>"; };
 		DC4764D8296AB1CA005D1EDE /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
+		DC4764DB296BDB47005D1EDE /* lesson_06_transform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_06_transform.cpp; sourceTree = "<group>"; };
+		DC4764DC296BDB47005D1EDE /* lesson_06_transform.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_06_transform.hpp; sourceTree = "<group>"; };
+		DC4764DE296BDEEC005D1EDE /* lesson6_frament.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson6_frament.glsl; sourceTree = "<group>"; };
+		DC4764DF296BDEEC005D1EDE /* lesson6_vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson6_vertex.glsl; sourceTree = "<group>"; };
 		DCF4B4B72966D017000F4107 /* lesson_01_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_01_window.cpp; sourceTree = "<group>"; };
 		DCF4B4B82966D017000F4107 /* lesson_01_window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lesson_01_window.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +189,8 @@
 		DC4764D3296A9A98005D1EDE /* glsl */ = {
 			isa = PBXGroup;
 			children = (
+				DC4764DE296BDEEC005D1EDE /* lesson6_frament.glsl */,
+				DC4764DF296BDEEC005D1EDE /* lesson6_vertex.glsl */,
 				DC4764D5296A9B22005D1EDE /* lesson5_frament.glsl */,
 				DC4764D4296A9AE2005D1EDE /* lesson5_vertex.glsl */,
 			);
@@ -211,6 +210,8 @@
 				DC47647F296A562C005D1EDE /* lesson_04_vertex.hpp */,
 				DC476481296A75D1005D1EDE /* lesson_05_texture.cpp */,
 				DC476482296A75D1005D1EDE /* lesson_05_texture.hpp */,
+				DC4764DB296BDB47005D1EDE /* lesson_06_transform.cpp */,
+				DC4764DC296BDB47005D1EDE /* lesson_06_transform.hpp */,
 			);
 			path = lesson;
 			sourceTree = "<group>";
@@ -271,7 +272,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		DC4764DA296AB6C5005D1EDE /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -284,7 +285,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"run script\"\necho $BUILT_PRODUCTS_DIR\n";
+			shellScript = "echo \"run script\"\ncp -rf $SRCROOT/learn_opengl/resources/* $BUILT_PRODUCTS_DIR\ncp -rf $SRCROOT/learn_opengl/glsl/* $BUILT_PRODUCTS_DIR\necho $BUILT_PRODUCTS_DIR\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -297,6 +298,7 @@
 				050CB33629665AB9005A1946 /* main.cpp in Sources */,
 				DC476480296A562C005D1EDE /* lesson_04_vertex.cpp in Sources */,
 				DCF4B4B92966D017000F4107 /* lesson_01_window.cpp in Sources */,
+				DC4764DD296BDB47005D1EDE /* lesson_06_transform.cpp in Sources */,
 				05831EAC2966B905006773FA /* glad.c in Sources */,
 				DC4764762969714C005D1EDE /* lesson_03_rectangle.cpp in Sources */,
 				DC47647D2969DB2B005D1EDE /* opengl_glsl_lang.cpp in Sources */,
