@@ -10,6 +10,7 @@
 
 #include "opengl_graphic_window.hpp"
 #include "opengl_glsl_lang.hpp"
+#include "opengl_texture.hpp"
 
 namespace Lesson05 {
     int entry(void);

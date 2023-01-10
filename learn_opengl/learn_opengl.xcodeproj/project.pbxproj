@@ -17,6 +17,8 @@
 		DC476480296A562C005D1EDE /* lesson_04_vertex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC47647E296A562C005D1EDE /* lesson_04_vertex.cpp */; };
 		DC476483296A75D1005D1EDE /* lesson_05_texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC476481296A75D1005D1EDE /* lesson_05_texture.cpp */; };
 		DC4764DD296BDB47005D1EDE /* lesson_06_transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764DB296BDB47005D1EDE /* lesson_06_transform.cpp */; };
+		DC4764E5296D2D23005D1EDE /* lesson_07_cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764E3296D2D23005D1EDE /* lesson_07_cube.cpp */; };
+		DC4764EA296D483C005D1EDE /* opengl_texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764E8296D483C005D1EDE /* opengl_texture.cpp */; };
 		DCF4B4AE2966C7CA000F4107 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EAB2966B905006773FA /* libglfw3.a */; };
 		DCF4B4AF2966C874000F4107 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EAE2966BA23006773FA /* Cocoa.framework */; };
 		DCF4B4B02966C87F000F4107 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EB02966BA84006773FA /* IOKit.framework */; };
@@ -57,13 +59,19 @@
 		DC476481296A75D1005D1EDE /* lesson_05_texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_05_texture.cpp; sourceTree = "<group>"; };
 		DC476482296A75D1005D1EDE /* lesson_05_texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_05_texture.hpp; sourceTree = "<group>"; };
 		DC4764D1296A913F005D1EDE /* wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wall.jpg; sourceTree = "<group>"; };
-		DC4764D4296A9AE2005D1EDE /* lesson5_vertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = lesson5_vertex.glsl; sourceTree = "<group>"; };
-		DC4764D5296A9B22005D1EDE /* lesson5_frament.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = lesson5_frament.glsl; sourceTree = "<group>"; };
+		DC4764D4296A9AE2005D1EDE /* lesson_05_vertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = lesson_05_vertex.glsl; sourceTree = "<group>"; };
+		DC4764D5296A9B22005D1EDE /* lesson_05_frament.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = lesson_05_frament.glsl; sourceTree = "<group>"; };
 		DC4764D8296AB1CA005D1EDE /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
 		DC4764DB296BDB47005D1EDE /* lesson_06_transform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_06_transform.cpp; sourceTree = "<group>"; };
 		DC4764DC296BDB47005D1EDE /* lesson_06_transform.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_06_transform.hpp; sourceTree = "<group>"; };
-		DC4764DE296BDEEC005D1EDE /* lesson6_frament.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson6_frament.glsl; sourceTree = "<group>"; };
-		DC4764DF296BDEEC005D1EDE /* lesson6_vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson6_vertex.glsl; sourceTree = "<group>"; };
+		DC4764DE296BDEEC005D1EDE /* lesson_06_frament.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_06_frament.glsl; sourceTree = "<group>"; };
+		DC4764DF296BDEEC005D1EDE /* lesson_06_vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_06_vertex.glsl; sourceTree = "<group>"; };
+		DC4764E3296D2D23005D1EDE /* lesson_07_cube.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_07_cube.cpp; sourceTree = "<group>"; };
+		DC4764E4296D2D23005D1EDE /* lesson_07_cube.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_07_cube.hpp; sourceTree = "<group>"; };
+		DC4764E6296D2D5F005D1EDE /* lesson_07_vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_07_vertex.glsl; sourceTree = "<group>"; };
+		DC4764E7296D2D5F005D1EDE /* lesson_07_frament.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_07_frament.glsl; sourceTree = "<group>"; };
+		DC4764E8296D483C005D1EDE /* opengl_texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = opengl_texture.cpp; sourceTree = "<group>"; };
+		DC4764E9296D483C005D1EDE /* opengl_texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = opengl_texture.hpp; sourceTree = "<group>"; };
 		DCF4B4B72966D017000F4107 /* lesson_01_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_01_window.cpp; sourceTree = "<group>"; };
 		DCF4B4B82966D017000F4107 /* lesson_01_window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lesson_01_window.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +180,8 @@
 				DC4764792969D951005D1EDE /* opengl_graphic_window.hpp */,
 				DC47647B2969DB2B005D1EDE /* opengl_glsl_lang.cpp */,
 				DC47647C2969DB2B005D1EDE /* opengl_glsl_lang.hpp */,
+				DC4764E8296D483C005D1EDE /* opengl_texture.cpp */,
+				DC4764E9296D483C005D1EDE /* opengl_texture.hpp */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -189,10 +199,12 @@
 		DC4764D3296A9A98005D1EDE /* glsl */ = {
 			isa = PBXGroup;
 			children = (
-				DC4764DE296BDEEC005D1EDE /* lesson6_frament.glsl */,
-				DC4764DF296BDEEC005D1EDE /* lesson6_vertex.glsl */,
-				DC4764D5296A9B22005D1EDE /* lesson5_frament.glsl */,
-				DC4764D4296A9AE2005D1EDE /* lesson5_vertex.glsl */,
+				DC4764E7296D2D5F005D1EDE /* lesson_07_frament.glsl */,
+				DC4764E6296D2D5F005D1EDE /* lesson_07_vertex.glsl */,
+				DC4764DE296BDEEC005D1EDE /* lesson_06_frament.glsl */,
+				DC4764DF296BDEEC005D1EDE /* lesson_06_vertex.glsl */,
+				DC4764D5296A9B22005D1EDE /* lesson_05_frament.glsl */,
+				DC4764D4296A9AE2005D1EDE /* lesson_05_vertex.glsl */,
 			);
 			path = glsl;
 			sourceTree = "<group>";
@@ -212,6 +224,8 @@
 				DC476482296A75D1005D1EDE /* lesson_05_texture.hpp */,
 				DC4764DB296BDB47005D1EDE /* lesson_06_transform.cpp */,
 				DC4764DC296BDB47005D1EDE /* lesson_06_transform.hpp */,
+				DC4764E3296D2D23005D1EDE /* lesson_07_cube.cpp */,
+				DC4764E4296D2D23005D1EDE /* lesson_07_cube.hpp */,
 			);
 			path = lesson;
 			sourceTree = "<group>";
@@ -294,12 +308,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4764EA296D483C005D1EDE /* opengl_texture.cpp in Sources */,
 				DC476483296A75D1005D1EDE /* lesson_05_texture.cpp in Sources */,
 				050CB33629665AB9005A1946 /* main.cpp in Sources */,
 				DC476480296A562C005D1EDE /* lesson_04_vertex.cpp in Sources */,
 				DCF4B4B92966D017000F4107 /* lesson_01_window.cpp in Sources */,
 				DC4764DD296BDB47005D1EDE /* lesson_06_transform.cpp in Sources */,
 				05831EAC2966B905006773FA /* glad.c in Sources */,
+				DC4764E5296D2D23005D1EDE /* lesson_07_cube.cpp in Sources */,
 				DC4764762969714C005D1EDE /* lesson_03_rectangle.cpp in Sources */,
 				DC47647D2969DB2B005D1EDE /* opengl_glsl_lang.cpp in Sources */,
 				DC47647A2969D951005D1EDE /* opengl_graphic_window.cpp in Sources */,

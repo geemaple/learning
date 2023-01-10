@@ -13,6 +13,7 @@
 #include "lesson_04_vertex.hpp"
 #include "lesson_05_texture.hpp"
 #include "lesson_06_transform.hpp"
+#include "lesson_07_cube.hpp"
 
 int main(void) {
     bool quit = false;
@@ -43,6 +44,9 @@ int main(void) {
                 break;
             case 6:
                 Lesson06::entry();
+                break;
+            case 7:
+                Lesson07::entry();
                 break;
         }
     }

@@ -6,8 +6,6 @@
 //
 
 #include "lesson_05_texture.hpp"
-#define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
 
 int Lesson05::entry(void) {
 
@@ -40,50 +38,18 @@ int Lesson05::entry(void) {
     glEnableVertexAttribArray(1);
     glEnableVertexAttribArray(2);
     
-    stbi_set_flip_vertically_on_load(true);
-    // texture unit 0
-    {
-        int width, height, nrChannels;
-        unsigned char *data = stbi_load("wall.jpg", &width, &height, &nrChannels, 0);
-        
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, texture[0]);
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-        glGenerateMipmap(GL_TEXTURE_2D);
-        stbi_image_free(data);
-        
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    }
-    
-    // texture unit 1
-    {
-        int width, height, nrChannels;
-        unsigned char *data = stbi_load("awesomeface.png", &width, &height, &nrChannels, 0);
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, texture[1]);
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
-        glGenerateMipmap(GL_TEXTURE_2D);
-        stbi_image_free(data);
-        
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    }
-    
     // unbind
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 
     GLenum types[] = {GL_VERTEX_SHADER, GL_FRAGMENT_SHADER};
-    const char* paths[] = {"lesson5_vertex.glsl", "lesson5_frament.glsl"};
+    const char* paths[] = {"lesson_05_vertex.glsl", "lesson_05_frament.glsl"};
     GLuint shaderProgram = shaderProgramFromFile(types, paths, 2);
+    glUseProgram(shaderProgram);
     
     // set uniforms
-    glUseProgram(shaderProgram);
+    load_texture(texture[0], "wall.jpg", GL_RGB, GL_TEXTURE0);
+    load_texture(texture[1], "awesomeface.png", GL_RGBA, GL_TEXTURE1);
     glUniform1i(glGetUniformLocation(shaderProgram, "texture1"), 0);
     glUniform1i(glGetUniformLocation(shaderProgram, "texture2"), 1);
     
