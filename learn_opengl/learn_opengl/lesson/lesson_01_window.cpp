@@ -10,12 +10,12 @@
 int Lesson01::entry(void) {
     
     // create window
-    GLFWwindow* window = createGraphicWindow("OpenGL Lesson 01", 800, 600);
+    GLFWwindow* window = createGraphicWindow("OpenGL Lesson 01", 800, 600, false);
     
     // render loop, each iteration is called a frame
     while(!glfwWindowShouldClose(window))
     {
-        processInput(window);
+        processKeyInput(window);
         
         // rendering commands here
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);

@@ -15,6 +15,7 @@
 #include "lesson_06_transform.hpp"
 #include "lesson_07_cube.hpp"
 #include "lesson_08_camera.hpp"
+#include "lesson_09_explore.hpp"
 
 int main(void) {
     bool quit = false;
@@ -51,6 +52,9 @@ int main(void) {
                 break;
             case 8:
                 Lesson08::entry();
+                break;
+            case 9:
+                Lesson09::entry();
                 break;
         }
     }

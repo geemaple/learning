@@ -26,7 +26,7 @@ const static char *fragmentShaderSource = "#version 330 core\n"
 int Lesson03::entry(void) {
     
     // create window
-    GLFWwindow* window = createGraphicWindow("OpenGL Lesson 03", 800, 600);
+    GLFWwindow* window = createGraphicWindow("OpenGL Lesson 03", 800, 600, false);
     queryVertexShaderInputLimit();
     
     float vertices[] = {
@@ -73,7 +73,7 @@ int Lesson03::entry(void) {
     // render loop, each iteration is called a frame
     while(!glfwWindowShouldClose(window))
     {
-        processInput(window);
+        processKeyInput(window);
         
         // rendering commands here
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);

@@ -10,6 +10,7 @@
 		050CB33629665AB9005A1946 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 050CB33529665AB9005A1946 /* main.cpp */; };
 		050CB33E29665D17005A1946 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050CB33D29665D17005A1946 /* OpenGL.framework */; };
 		05831EAC2966B905006773FA /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 05831E9C2966B905006773FA /* glad.c */; };
+		DC3896C1296FFC510026A282 /* lesson_09_explore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC3896BF296FFC510026A282 /* lesson_09_explore.cpp */; };
 		DC4763942967E588005D1EDE /* lesson_02_triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4763922967E588005D1EDE /* lesson_02_triangle.cpp */; };
 		DC4764762969714C005D1EDE /* lesson_03_rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764742969714C005D1EDE /* lesson_03_rectangle.cpp */; };
 		DC47647A2969D951005D1EDE /* opengl_graphic_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764782969D951005D1EDE /* opengl_graphic_window.cpp */; };
@@ -47,6 +48,10 @@
 		05831EAB2966B905006773FA /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libglfw3.a; sourceTree = "<group>"; };
 		05831EAE2966BA23006773FA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		05831EB02966BA84006773FA /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		DC3896BF296FFC510026A282 /* lesson_09_explore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_09_explore.cpp; sourceTree = "<group>"; };
+		DC3896C0296FFC510026A282 /* lesson_09_explore.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lesson_09_explore.hpp; sourceTree = "<group>"; };
+		DC3896C2296FFC7F0026A282 /* lesson_09_frament.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_09_frament.glsl; sourceTree = "<group>"; };
+		DC3896C3296FFC7F0026A282 /* lesson_09_vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_09_vertex.glsl; sourceTree = "<group>"; };
 		DC4763922967E588005D1EDE /* lesson_02_triangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_02_triangle.cpp; sourceTree = "<group>"; };
 		DC4763932967E588005D1EDE /* lesson_02_triangle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_02_triangle.hpp; sourceTree = "<group>"; };
 		DC4764742969714C005D1EDE /* lesson_03_rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_03_rectangle.cpp; sourceTree = "<group>"; };
@@ -204,6 +209,8 @@
 		DC4764D3296A9A98005D1EDE /* glsl */ = {
 			isa = PBXGroup;
 			children = (
+				DC3896C2296FFC7F0026A282 /* lesson_09_frament.glsl */,
+				DC3896C3296FFC7F0026A282 /* lesson_09_vertex.glsl */,
 				DC4764EE296DABE4005D1EDE /* lesson_08_frament.glsl */,
 				DC4764EF296DABE4005D1EDE /* lesson_08_vertex.glsl */,
 				DC4764E7296D2D5F005D1EDE /* lesson_07_frament.glsl */,
@@ -235,6 +242,8 @@
 				DC4764E4296D2D23005D1EDE /* lesson_07_cube.hpp */,
 				DC4764EB296DAADD005D1EDE /* lesson_08_camera.cpp */,
 				DC4764EC296DAADD005D1EDE /* lesson_08_camera.hpp */,
+				DC3896BF296FFC510026A282 /* lesson_09_explore.cpp */,
+				DC3896C0296FFC510026A282 /* lesson_09_explore.hpp */,
 			);
 			path = lesson;
 			sourceTree = "<group>";
@@ -317,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC3896C1296FFC510026A282 /* lesson_09_explore.cpp in Sources */,
 				DC4764ED296DAADD005D1EDE /* lesson_08_camera.cpp in Sources */,
 				DC4764EA296D483C005D1EDE /* opengl_texture.cpp in Sources */,
 				DC476483296A75D1005D1EDE /* lesson_05_texture.cpp in Sources */,
