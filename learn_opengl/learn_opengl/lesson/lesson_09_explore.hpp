@@ -11,6 +11,7 @@
 #include "opengl_graphic_window.hpp"
 #include "opengl_glsl_lang.hpp"
 #include "opengl_texture.hpp"
+#include "opengl_input.hpp"
 
 namespace Lesson09 {
     int entry(void);

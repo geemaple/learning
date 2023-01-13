@@ -11,6 +11,7 @@
 		050CB33E29665D17005A1946 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050CB33D29665D17005A1946 /* OpenGL.framework */; };
 		05831EAC2966B905006773FA /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 05831E9C2966B905006773FA /* glad.c */; };
 		DC3896C1296FFC510026A282 /* lesson_09_explore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC3896BF296FFC510026A282 /* lesson_09_explore.cpp */; };
+		DC3896C9297110740026A282 /* opengl_input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC3896C7297110740026A282 /* opengl_input.cpp */; };
 		DC4763942967E588005D1EDE /* lesson_02_triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4763922967E588005D1EDE /* lesson_02_triangle.cpp */; };
 		DC4764762969714C005D1EDE /* lesson_03_rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764742969714C005D1EDE /* lesson_03_rectangle.cpp */; };
 		DC47647A2969D951005D1EDE /* opengl_graphic_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764782969D951005D1EDE /* opengl_graphic_window.cpp */; };
@@ -52,6 +53,8 @@
 		DC3896C0296FFC510026A282 /* lesson_09_explore.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lesson_09_explore.hpp; sourceTree = "<group>"; };
 		DC3896C2296FFC7F0026A282 /* lesson_09_frament.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_09_frament.glsl; sourceTree = "<group>"; };
 		DC3896C3296FFC7F0026A282 /* lesson_09_vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_09_vertex.glsl; sourceTree = "<group>"; };
+		DC3896C7297110740026A282 /* opengl_input.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = opengl_input.cpp; sourceTree = "<group>"; };
+		DC3896C8297110740026A282 /* opengl_input.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = opengl_input.hpp; sourceTree = "<group>"; };
 		DC4763922967E588005D1EDE /* lesson_02_triangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_02_triangle.cpp; sourceTree = "<group>"; };
 		DC4763932967E588005D1EDE /* lesson_02_triangle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_02_triangle.hpp; sourceTree = "<group>"; };
 		DC4764742969714C005D1EDE /* lesson_03_rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_03_rectangle.cpp; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				DC47647C2969DB2B005D1EDE /* opengl_glsl_lang.hpp */,
 				DC4764E8296D483C005D1EDE /* opengl_texture.cpp */,
 				DC4764E9296D483C005D1EDE /* opengl_texture.hpp */,
+				DC3896C7297110740026A282 /* opengl_input.cpp */,
+				DC3896C8297110740026A282 /* opengl_input.hpp */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				DC4764EA296D483C005D1EDE /* opengl_texture.cpp in Sources */,
 				DC476483296A75D1005D1EDE /* lesson_05_texture.cpp in Sources */,
 				050CB33629665AB9005A1946 /* main.cpp in Sources */,
+				DC3896C9297110740026A282 /* opengl_input.cpp in Sources */,
 				DC476480296A562C005D1EDE /* lesson_04_vertex.cpp in Sources */,
 				DCF4B4B92966D017000F4107 /* lesson_01_window.cpp in Sources */,
 				DC4764DD296BDB47005D1EDE /* lesson_06_transform.cpp in Sources */,
