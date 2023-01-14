@@ -70,11 +70,10 @@ int Lesson09::entry(void) {
         glm::vec3(-1.3f,  1.0f, -1.5f)
     };
     
-    GLuint VBO, VAO, EBO, texture[2];
+    GLuint VBO, VAO, texture[2];
     // create
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
-    glGenBuffers(1, &EBO);
     glGenTextures(2, texture);
 
     // vertex
@@ -154,7 +153,6 @@ int Lesson09::entry(void) {
     // clean up all the resources
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
-    glDeleteBuffers(1, &EBO);
     glDeleteTextures(2, texture);
     glDeleteProgram(shaderProgram);
     glfwTerminate();

@@ -59,8 +59,7 @@ int Lesson06::entry(void) {
         trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
         trans = glm::scale(trans, glm::vec3(2, 2, 2));
         
-        unsigned int transformLoc = glGetUniformLocation(shaderProgram, "transform");
-        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
+        glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "transform"), 1, GL_FALSE, glm::value_ptr(trans));
         
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);

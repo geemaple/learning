@@ -82,11 +82,10 @@ int Lesson03::entry(void) {
         // find variable
         float timeValue = glfwGetTime();
         float greenValue = sin(timeValue) / 2.0f + 0.5f;
-        int polygonColor = glGetUniformLocation(shaderProgram, "polygonColor");
         
         // update color
         glUseProgram(shaderProgram);
-        glUniform4f(polygonColor, 0.0f, greenValue, 0.0f, 1.0f);
+        glUniform4f(glGetUniformLocation(shaderProgram, "polygonColor"), 0.0f, greenValue, 0.0f, 1.0f);
         
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
