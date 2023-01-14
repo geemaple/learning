@@ -24,7 +24,7 @@ void processMouseCapture(GLFWwindow* window, glm::vec3& cameraFront, float &pitc
     float xoffset = capture.x - capture.lastX;
     float yoffset = capture.lastY - capture.y; // reversed since y-coordinates range from bottom to top
     
-    const float sensitivity = 0.1f;
+    const float sensitivity = 0.5f;
     xoffset *= sensitivity;
     yoffset *= sensitivity;
     
@@ -37,6 +37,8 @@ void processMouseCapture(GLFWwindow* window, glm::vec3& cameraFront, float &pitc
     if (pitch < -89.0f)
         pitch = -89.0f;
     
+    std::cout << pitch << "," << yaw << std::endl;
+    
     glm::vec3 front;
     front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
     front.y = sin(glm::radians(pitch));
@@ -47,6 +49,10 @@ void processMouseCapture(GLFWwindow* window, glm::vec3& cameraFront, float &pitc
 void processArrowKeys(GLFWwindow *window, glm::vec3& cameraPos, glm::vec3& cameraFront, glm::vec3& cameraUp, float deltaTime)
 {
     processKeyInput(window);
+    
+    if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS) {
+        glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+    }
     
     const float cameraSpeed = 2.5f * deltaTime; // adjust accordingly
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS or glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)

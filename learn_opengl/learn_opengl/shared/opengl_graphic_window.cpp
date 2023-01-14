@@ -18,7 +18,7 @@ static void scroll_callback(GLFWwindow* window, double xOffset, double yOffset) 
     zoomUpade = true;
 }
 
-static void mouseCaptureCallback(GLFWwindow* window, double xpos, double ypos) {
+static void mouse_capture_callback(GLFWwindow* window, double xpos, double ypos) {
     positionCapture.lastX = positionCapture.x;
     positionCapture.lastY = positionCapture.y;
     positionCapture.x = xpos;
@@ -102,7 +102,7 @@ GLFWwindow * createGraphicWindow(const char *title, int width, int height, bool 
     glfwSetFramebufferSizeCallback(window, windowResizeCallback);
     if (enableMouseCapture) {
         glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-        glfwSetCursorPosCallback(window, mouseCaptureCallback);
+        glfwSetCursorPosCallback(window, mouse_capture_callback);
         glfwSetScrollCallback(window, scroll_callback); 
     } else {
         glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);

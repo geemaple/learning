@@ -13,6 +13,7 @@
 		DC3896C1296FFC510026A282 /* lesson_09_explore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC3896BF296FFC510026A282 /* lesson_09_explore.cpp */; };
 		DC3896C9297110740026A282 /* opengl_input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC3896C7297110740026A282 /* opengl_input.cpp */; };
 		DC3896CC29724BCA0026A282 /* lesson_10_lighting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC3896CA29724BCA0026A282 /* lesson_10_lighting.cpp */; };
+		DC3896DF297272440026A282 /* lesson_11_phong.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC3896DD297272440026A282 /* lesson_11_phong.cpp */; };
 		DC4763942967E588005D1EDE /* lesson_02_triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4763922967E588005D1EDE /* lesson_02_triangle.cpp */; };
 		DC4764762969714C005D1EDE /* lesson_03_rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764742969714C005D1EDE /* lesson_03_rectangle.cpp */; };
 		DC47647A2969D951005D1EDE /* opengl_graphic_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764782969D951005D1EDE /* opengl_graphic_window.cpp */; };
@@ -70,6 +71,10 @@
 		DC3896DA29724C450026A282 /* lesson_08_vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_08_vertex.glsl; sourceTree = "<group>"; };
 		DC3896DB2972524B0026A282 /* lighting_fragment.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = lighting_fragment.glsl; sourceTree = "<group>"; };
 		DC3896DC297253900026A282 /* lighting_vertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = lighting_vertex.glsl; sourceTree = "<group>"; };
+		DC3896DD297272440026A282 /* lesson_11_phong.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_11_phong.cpp; sourceTree = "<group>"; };
+		DC3896DE297272440026A282 /* lesson_11_phong.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_11_phong.hpp; sourceTree = "<group>"; };
+		DC3896E0297272A70026A282 /* lesson_11_vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_11_vertex.glsl; sourceTree = "<group>"; };
+		DC3896E1297272A70026A282 /* lesson_11_frament.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_11_frament.glsl; sourceTree = "<group>"; };
 		DC4763922967E588005D1EDE /* lesson_02_triangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_02_triangle.cpp; sourceTree = "<group>"; };
 		DC4763932967E588005D1EDE /* lesson_02_triangle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_02_triangle.hpp; sourceTree = "<group>"; };
 		DC4764742969714C005D1EDE /* lesson_03_rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_03_rectangle.cpp; sourceTree = "<group>"; };
@@ -235,6 +240,8 @@
 				DC3896D929724C450026A282 /* lesson_09_vertex.glsl */,
 				DC3896D529724C450026A282 /* lesson_10_frament.glsl */,
 				DC3896CF29724C450026A282 /* lesson_10_vertex.glsl */,
+				DC3896E1297272A70026A282 /* lesson_11_frament.glsl */,
+				DC3896E0297272A70026A282 /* lesson_11_vertex.glsl */,
 			);
 			path = glsl;
 			sourceTree = "<group>";
@@ -262,6 +269,8 @@
 				DC3896C0296FFC510026A282 /* lesson_09_explore.hpp */,
 				DC3896CA29724BCA0026A282 /* lesson_10_lighting.cpp */,
 				DC3896CB29724BCA0026A282 /* lesson_10_lighting.hpp */,
+				DC3896DD297272440026A282 /* lesson_11_phong.cpp */,
+				DC3896DE297272440026A282 /* lesson_11_phong.hpp */,
 			);
 			path = lesson;
 			sourceTree = "<group>";
@@ -344,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC3896DF297272440026A282 /* lesson_11_phong.cpp in Sources */,
 				DC3896CC29724BCA0026A282 /* lesson_10_lighting.cpp in Sources */,
 				DC3896C1296FFC510026A282 /* lesson_09_explore.cpp in Sources */,
 				DC4764ED296DAADD005D1EDE /* lesson_08_camera.cpp in Sources */,

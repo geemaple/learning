@@ -17,6 +17,7 @@
 #include "lesson_08_camera.hpp"
 #include "lesson_09_explore.hpp"
 #include "lesson_10_lighting.hpp"
+#include "lesson_11_phong.hpp"
 
 int main(void) {
     bool quit = false;
@@ -59,6 +60,9 @@ int main(void) {
                 break;
             case 10:
                 Lesson10::entry();
+                break;
+            case 11:
+                Lesson11::entry();
                 break;
         }
     }
