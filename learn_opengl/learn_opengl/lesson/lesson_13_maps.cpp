@@ -65,12 +65,12 @@ int Lesson13::entry(void) {
         glm::vec3(1.2f, 1.0f, 2.0f),
     };
     
-    GLuint VBO, VAO, EBO, Maps[2];
+    GLuint VBO, VAO, EBO, Maps[3];
     // create
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     glGenBuffers(1, &EBO);
-    glGenTextures(2, Maps);
+    glGenTextures(3, Maps);
     // vertex
     glBindVertexArray(VAO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
@@ -99,7 +99,7 @@ int Lesson13::entry(void) {
     
     load_texture(Maps[0], "crate-diffuse.png", GL_TEXTURE0);
     load_texture(Maps[1], "crate-specular.png", GL_TEXTURE1);
-    
+    load_texture(Maps[2], "crate-emission.jpg", GL_TEXTURE2);
     glm::vec3 cameraPos   = glm::vec3(0.0f, 0.0f,  3.0f);
     glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
     glm::vec3 cameraUp    = glm::vec3(0.0f, 1.0f,  0.0f);
@@ -141,6 +141,7 @@ int Lesson13::entry(void) {
         
         glUniform1i(glGetUniformLocation(shaderProgram, "material.diffuse"), 0);
         glUniform1i(glGetUniformLocation(shaderProgram, "material.specular"), 1);
+        glUniform1i(glGetUniformLocation(shaderProgram, "material.emission"), 2);
         glUniform1f(glGetUniformLocation(shaderProgram, "material.shininess"), 32.0f);
         
         for (int i = 0; i < sizeof(cube_positions) / sizeof(glm::vec3); ++i) {
@@ -171,7 +172,7 @@ int Lesson13::entry(void) {
     // clean up all the resources
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
-    glDeleteTextures(2, Maps);
+    glDeleteTextures(3, Maps);
     glDeleteProgram(shaderProgram);
     glfwTerminate();
     

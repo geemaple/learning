@@ -109,6 +109,8 @@
 		DC87D40D297A8C160055BDFE /* lesson_13_vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_13_vertex.glsl; sourceTree = "<group>"; };
 		DC87D40E297A8E3A0055BDFE /* crate-diffuse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crate-diffuse.png"; sourceTree = "<group>"; };
 		DC87D40F297AA7C70055BDFE /* crate-specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crate-specular.png"; sourceTree = "<group>"; };
+		DC87D410297AB2F80055BDFE /* crate-color-specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crate-color-specular.png"; sourceTree = "<group>"; };
+		DC87D412297ABABF0055BDFE /* crate-emission.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "crate-emission.jpg"; sourceTree = "<group>"; };
 		DCF4B4B72966D017000F4107 /* lesson_01_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_01_window.cpp; sourceTree = "<group>"; };
 		DCF4B4B82966D017000F4107 /* lesson_01_window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lesson_01_window.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,6 +230,8 @@
 		DC4764D0296A913F005D1EDE /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				DC87D412297ABABF0055BDFE /* crate-emission.jpg */,
+				DC87D410297AB2F80055BDFE /* crate-color-specular.png */,
 				DC87D40F297AA7C70055BDFE /* crate-specular.png */,
 				DC87D40E297A8E3A0055BDFE /* crate-diffuse.png */,
 				DC4764D8296AB1CA005D1EDE /* awesomeface.png */,
