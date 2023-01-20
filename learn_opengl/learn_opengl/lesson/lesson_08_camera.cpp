@@ -109,8 +109,8 @@ int Lesson08::entry(void) {
     glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
     
     //texture
-    load_texture(texture[0], "wall.jpg", GL_RGB, GL_TEXTURE0);
-    load_texture(texture[1], "awesomeface.png", GL_RGBA, GL_TEXTURE1);
+    load_texture(texture[0], "wall.jpg", GL_TEXTURE0);
+    load_texture(texture[1], "awesomeface.png", GL_TEXTURE1);
     glUniform1i(glGetUniformLocation(shaderProgram, "texture1"), 0);
     glUniform1i(glGetUniformLocation(shaderProgram, "texture2"), 1);
     

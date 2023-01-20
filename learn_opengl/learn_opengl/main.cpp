@@ -19,6 +19,7 @@
 #include "lesson_10_lighting.hpp"
 #include "lesson_11_phong.hpp"
 #include "lesson_12_material.hpp"
+#include "lesson_13_maps.hpp"
 
 int main(void) {
     bool quit = false;
@@ -67,6 +68,9 @@ int main(void) {
                 break;
             case 12:
                 Lesson12::entry();
+                break;
+            case 13:
+                Lesson13::entry();
                 break;
         }
     }

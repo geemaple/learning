@@ -16,6 +16,6 @@
 #include <GLFW/glfw3.h>
 #include <cmath>
 
-void load_texture(GLuint texture, const char *path, GLenum format, GLenum index);
+void load_texture(GLuint texture, const char *path, GLenum index);
 
 #endif /* opengl_texture_hpp */

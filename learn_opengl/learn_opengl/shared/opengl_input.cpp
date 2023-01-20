@@ -37,7 +37,7 @@ void processMouseCapture(GLFWwindow* window, glm::vec3& cameraFront, float &pitc
     if (pitch < -89.0f)
         pitch = -89.0f;
     
-    std::cout << pitch << "," << yaw << std::endl;
+//    std::cout << pitch << "," << yaw << std::endl;
     
     glm::vec3 front;
     front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));

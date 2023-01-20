@@ -9,11 +9,17 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
-void load_texture(GLuint texture, const char *path, GLenum format, GLenum index) {
+void load_texture(GLuint texture, const char *path, GLenum index) {
     stbi_set_flip_vertically_on_load(true);
 
     int width, height, nrChannels;
     unsigned char *data = stbi_load(path, &width, &height, &nrChannels, 0);
+    
+    GLenum format = GL_RED;
+    if (nrChannels == 3)
+        format = GL_RGB;
+    else if (nrChannels == 4)
+        format = GL_RGBA;
     
     glActiveTexture(index);
     glBindTexture(GL_TEXTURE_2D, texture);

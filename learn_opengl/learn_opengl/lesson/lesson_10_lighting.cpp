@@ -137,6 +137,7 @@ int Lesson10::entry(void) {
         glUseProgram(lightingProgram);
         glUniformMatrix4fv(glGetUniformLocation(lightingProgram, "view"), 1, GL_FALSE, glm::value_ptr(view));
         glUniformMatrix4fv(glGetUniformLocation(lightingProgram, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
+        glUniform3f(glGetUniformLocation(lightingProgram, "lightColor"), 1.0f, 1.0f, 1.0f);
         for (int i = 0; i < sizeof(lighting_positions) / sizeof(glm::vec3); ++i) {
             glm::mat4 model = glm::mat4(1.0f);
             model = glm::translate(model, lighting_positions[i]);
