@@ -26,10 +26,10 @@ down_color = 'red'
 
 plt.style.use('fivethirtyeight')
 figure, axis = plt.subplots(2)
-figure.canvas.manager.set_window_title('lesson 01')
+figure.canvas.manager.set_window_title('lesson 02')
 figure.set_size_inches(8, 6)
 
-# #plot up prices
+#plot up prices
 k = axis[0]
 k.set_title('Candle Chart')
 k.bar(up.index, up.close - up.open, candle, bottom=up.open, color=up_color)
@@ -41,12 +41,34 @@ k.bar(down.index, down.high - down.open, wick, bottom=down.open, color=down_colo
 k.bar(down.index, down.close - down.low, wick, bottom=down.low, color=down_color)
 k.axes.get_xaxis().set_visible(False)
 
-#plot volume
+# RSI
+days = 14
+# calculate U and D
+change = df.tail(365 + days)['close'].diff()
+
+ups = change.copy()
+downs = change.copy()
+
+ups[ups < 0] = 0
+downs[downs > 0] = 0
+
+# calculate RS
+sma_up = ups.rolling(days).mean().tail(365)
+sma_down = downs.rolling(days).mean().abs().tail(365)
+
+# scale rs to range [1, 100]
+rsi = 100 * sma_up / (sma_up + sma_down)
+print(rsi)
+
+#plot rsi
 ta = axis[1]
-ta.set_title('Volume')
-ta.bar(up.index, up.volume, candle, bottom=0, color=up_color)
-ta.bar(down.index, down.volume, candle, bottom=0, color=down_color)
-#rotate x-axis tick labels
+ta.set_title('Relative Strength Index')
+ta.plot(rsi, color='orange', linewidth=1)
+
+# Oversold
+ta.axhline(30, linestyle='--', linewidth=1.5, color='green')
+ta.axhline(70, linestyle='--', linewidth=1.5, color='red')
+
 plt.xticks(rotation=45,  ha='right')
 plt.subplots_adjust(bottom=0.2)
 plt.show()
