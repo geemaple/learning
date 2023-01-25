@@ -1,6 +1,4 @@
-import datetime
 import pandas as pd
-import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 
 # The usage of the index_col and parse_dates parameters of the read_csv function to 
@@ -8,7 +6,7 @@ import matplotlib.pyplot as plt
 # convert the dates in the column to Timestamp objects, respectively.
 df = pd.read_csv('BTC-USD.csv', index_col=0, parse_dates=True)
 df.columns= df.columns.str.lower()
-
+df.sort_index()
 #latest 1 year data
 prices = df.tail(365)
 
