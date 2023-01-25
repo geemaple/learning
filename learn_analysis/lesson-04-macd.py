@@ -32,12 +32,12 @@ up_color = 'green'
 down_color = 'red'
 
 plt.style.use('fivethirtyeight')
-figure, axis = plt.subplots(1)
-figure.canvas.manager.set_window_title('lesson 03')
+figure, axis = plt.subplots(2)
+figure.canvas.manager.set_window_title('lesson 04')
 figure.set_size_inches(8, 6)
 
 #plot up prices
-k = axis
+k = axis[0]
 k.set_title('Candle Chart')
 k.bar(up.index, up.close - up.open, candle, bottom=up.open, color=up_color)
 k.bar(up.index, up.high - up.close, wick, bottom=up.close, color=up_color)
@@ -48,39 +48,33 @@ k.bar(down.index, down.high - down.open, wick, bottom=down.open, color=down_colo
 k.bar(down.index, down.close - down.low, wick, bottom=down.low, color=down_color)
 k.axes.get_xaxis().set_visible(False)
 
-# MA
-days = 14
-close_prices = df.tail(365 * 2)['close']
+# MACD
+fast = 12
+slow = 26
+smooth = 9
+window = max([fast, slow]) + smooth
+close_prices = df['close']
 
-# SMA
-sma = close_prices.tail(365 + days).rolling(days).mean().tail(365)
+ema_fast = close_prices.tail(365 + window).ewm(span=fast,min_periods=fast,adjust=False,ignore_na=False).mean()
+ema_slow = close_prices.tail(365 + window).ewm(span=slow,min_periods=slow,adjust=False,ignore_na=False).mean()
+macd_line = ema_fast - ema_slow
+macd_signal = macd_line.ewm(span=smooth, min_periods=smooth, adjust=False, ignore_na=False).mean()
+macd_histogram = macd_line - macd_signal
 
-# WMA
-weights = np.array([i for i in range(14, 0, -1)])
-sum_wights = np.sum(weights)
-wma = close_prices.tail(365 + days).rolling(days).apply(lambda x: np.sum(x * weights) / sum_wights).tail(365)
+#plot MACD
+ta = axis[1]
+ta.set_title('Moving Average Convergence Divergence')
+ta.plot(macd_line.tail(365), color='darkorange', linewidth=1, label='MACD')
+ta.plot(macd_signal.tail(365), color='royalblue', linewidth=1, label='Signal')
 
-# EMA
-ema_1 = close_prices.tail(365 + days).ewm(span=days,min_periods=days,adjust=False,ignore_na=False).mean()
-ema_2 = ema_1.ewm(span=days,min_periods=days,adjust=False,ignore_na=False).mean()
-ema_3 = ema_2.ewm(span=days,min_periods=days,adjust=False,ignore_na=False).mean()
-ema = ema_1.tail(365)
+histogram = macd_histogram.tail(365)
+for i in range(len(histogram)):
+    if histogram[i] >= 0:
+        ta.bar(histogram.index[i], histogram[i], color=up_color)
+    else:
+        ta.bar(histogram.index[i], histogram[i], color=down_color)
 
-# Double EMA
-double_ema = (2 * ema_1 - ema_2).tail(365)
-
-triple_ema = ((3 * ema_1 - 3 * ema_2) + ema_3).tail(365)
-# Tripple EMA
-
-# 200SMA
-sma200 = close_prices.tail(365 + 200).rolling(200).mean().tail(365)
-
-k.plot(sma, color='gold', linewidth=1, label='14 SMA')
-k.plot(wma, color='darkorange', linewidth=1, label='14 WMA')
-k.plot(ema, color='royalblue', linewidth=1, label='14 EMA')
-k.plot(double_ema, color='blueviolet', linewidth=1, label='14 Double EMA')
-k.plot(triple_ema, color='darkcyan', linewidth=1, label='14 Triple EMA')
-k.plot(sma200, color='black', linewidth=1, label='200 SMA')
-plt.legend(loc='upper right')
 plt.xticks(rotation=45,  ha='right')
+plt.legend(loc='lower right')
+plt.subplots_adjust(bottom=0.2)
 plt.show()
