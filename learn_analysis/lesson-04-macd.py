@@ -61,6 +61,10 @@ macd_line = ema_fast - ema_slow
 macd_signal = macd_line.ewm(span=smooth, min_periods=smooth, adjust=False, ignore_na=False).mean()
 macd_histogram = macd_line - macd_signal
 
+k.plot(ema_fast.tail(365), color='darkorange', linewidth=1, label='12 EMA')
+k.plot(ema_slow.tail(365), color='royalblue', linewidth=1, label='26 EMA')
+k.legend(loc='upper right')
+
 #plot MACD
 ta = axis[1]
 ta.set_title('Moving Average Convergence Divergence')
@@ -74,7 +78,8 @@ for i in range(len(histogram)):
     else:
         ta.bar(histogram.index[i], histogram[i], color=down_color)
 
+ta.legend(loc='lower right')
+
 plt.xticks(rotation=45,  ha='right')
-plt.legend(loc='lower right')
 plt.subplots_adjust(bottom=0.2)
 plt.show()
