@@ -26,6 +26,8 @@
 		DC4764ED296DAADD005D1EDE /* lesson_08_camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC4764EB296DAADD005D1EDE /* lesson_08_camera.cpp */; };
 		DC87D406297A53CC0055BDFE /* lesson_12_material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC87D404297A53CC0055BDFE /* lesson_12_material.cpp */; };
 		DC87D40B297A8BE70055BDFE /* lesson_13_maps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC87D409297A8BE70055BDFE /* lesson_13_maps.cpp */; };
+		DCAECF1D2983A12F005A1962 /* lesson_14_light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCAECF1B2983A12F005A1962 /* lesson_14_light.cpp */; };
+		DCAECF272983E5AA005A1962 /* lesson_15_spotlight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCAECF252983E5AA005A1962 /* lesson_15_spotlight.cpp */; };
 		DCF4B4AE2966C7CA000F4107 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EAB2966B905006773FA /* libglfw3.a */; };
 		DCF4B4AF2966C874000F4107 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EAE2966BA23006773FA /* Cocoa.framework */; };
 		DCF4B4B02966C87F000F4107 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05831EB02966BA84006773FA /* IOKit.framework */; };
@@ -111,6 +113,15 @@
 		DC87D40F297AA7C70055BDFE /* crate-specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crate-specular.png"; sourceTree = "<group>"; };
 		DC87D410297AB2F80055BDFE /* crate-color-specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crate-color-specular.png"; sourceTree = "<group>"; };
 		DC87D412297ABABF0055BDFE /* crate-emission.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "crate-emission.jpg"; sourceTree = "<group>"; };
+		DCAECF1B2983A12F005A1962 /* lesson_14_light.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_14_light.cpp; sourceTree = "<group>"; };
+		DCAECF1C2983A12F005A1962 /* lesson_14_light.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_14_light.hpp; sourceTree = "<group>"; };
+		DCAECF1F2983A3D3005A1962 /* lesson_14_vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_14_vertex.glsl; sourceTree = "<group>"; };
+		DCAECF202983D2DB005A1962 /* lesson_14_frament_directional.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_14_frament_directional.glsl; sourceTree = "<group>"; };
+		DCAECF212983D371005A1962 /* lesson_14_frament_point.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = lesson_14_frament_point.glsl; sourceTree = "<group>"; };
+		DCAECF232983E577005A1962 /* lesson_15_frament.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_15_frament.glsl; sourceTree = "<group>"; };
+		DCAECF242983E577005A1962 /* lesson_15_vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lesson_15_vertex.glsl; sourceTree = "<group>"; };
+		DCAECF252983E5AA005A1962 /* lesson_15_spotlight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_15_spotlight.cpp; sourceTree = "<group>"; };
+		DCAECF262983E5AA005A1962 /* lesson_15_spotlight.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lesson_15_spotlight.hpp; sourceTree = "<group>"; };
 		DCF4B4B72966D017000F4107 /* lesson_01_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lesson_01_window.cpp; sourceTree = "<group>"; };
 		DCF4B4B82966D017000F4107 /* lesson_01_window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lesson_01_window.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -264,6 +275,11 @@
 				DC87D407297A547E0055BDFE /* lesson_12_vertex.glsl */,
 				DC87D40C297A8C160055BDFE /* lesson_13_frament.glsl */,
 				DC87D40D297A8C160055BDFE /* lesson_13_vertex.glsl */,
+				DCAECF1F2983A3D3005A1962 /* lesson_14_vertex.glsl */,
+				DCAECF202983D2DB005A1962 /* lesson_14_frament_directional.glsl */,
+				DCAECF212983D371005A1962 /* lesson_14_frament_point.glsl */,
+				DCAECF232983E577005A1962 /* lesson_15_frament.glsl */,
+				DCAECF242983E577005A1962 /* lesson_15_vertex.glsl */,
 			);
 			path = glsl;
 			sourceTree = "<group>";
@@ -297,6 +313,10 @@
 				DC87D405297A53CC0055BDFE /* lesson_12_material.hpp */,
 				DC87D409297A8BE70055BDFE /* lesson_13_maps.cpp */,
 				DC87D40A297A8BE70055BDFE /* lesson_13_maps.hpp */,
+				DCAECF1B2983A12F005A1962 /* lesson_14_light.cpp */,
+				DCAECF1C2983A12F005A1962 /* lesson_14_light.hpp */,
+				DCAECF252983E5AA005A1962 /* lesson_15_spotlight.cpp */,
+				DCAECF262983E5AA005A1962 /* lesson_15_spotlight.hpp */,
 			);
 			path = lesson;
 			sourceTree = "<group>";
@@ -381,7 +401,9 @@
 			files = (
 				DC87D40B297A8BE70055BDFE /* lesson_13_maps.cpp in Sources */,
 				DC3896DF297272440026A282 /* lesson_11_phong.cpp in Sources */,
+				DCAECF272983E5AA005A1962 /* lesson_15_spotlight.cpp in Sources */,
 				DC3896CC29724BCA0026A282 /* lesson_10_lighting.cpp in Sources */,
+				DCAECF1D2983A12F005A1962 /* lesson_14_light.cpp in Sources */,
 				DC3896C1296FFC510026A282 /* lesson_09_explore.cpp in Sources */,
 				DC4764ED296DAADD005D1EDE /* lesson_08_camera.cpp in Sources */,
 				DC4764EA296D483C005D1EDE /* opengl_texture.cpp in Sources */,

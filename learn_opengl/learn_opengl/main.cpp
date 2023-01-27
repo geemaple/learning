@@ -20,6 +20,8 @@
 #include "lesson_11_phong.hpp"
 #include "lesson_12_material.hpp"
 #include "lesson_13_maps.hpp"
+#include "lesson_14_light.hpp"
+#include "lesson_15_spotlight.hpp"
 
 int main(void) {
     bool quit = false;
@@ -71,6 +73,12 @@ int main(void) {
                 break;
             case 13:
                 Lesson13::entry();
+                break;
+            case 14:
+                Lesson14::entry();
+                break;
+            case 15:
+                Lesson15::entry();
                 break;
         }
     }
