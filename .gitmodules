@@ -1,3 +1,6 @@
 [submodule "learn_cs/cs162_operating_system/pintos"]
 	path = learn_cs/cs162_operating_system/pintos
 	url = https://github.com/geemaple/pintos
+[submodule "learn_cs/cs162_operating_system/pcasm"]
+	path = learn_cs/cs162_operating_system/pcasm
+	url = git@github.com:geemaple/pcasm.git
