@@ -177,7 +177,7 @@ while True:
 
     elif left == 1:
         mouse = pygame.mouse.get_pos()
-
+        flags = ai.mines.copy()
         # If AI button clicked, make an AI move
         if aiButton.collidepoint(mouse) and not lost:
             move = ai.make_safe_move()
