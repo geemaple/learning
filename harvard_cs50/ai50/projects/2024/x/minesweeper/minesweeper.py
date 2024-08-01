@@ -94,8 +94,6 @@ class Sentence():
     def __init__(self, cells, count):
         self.cells = set(cells)
         self.count = count
-        self.mines = set()
-        self.safes = set()
 
     def __eq__(self, other):
         return self.cells == other.cells and self.count == other.count
@@ -107,13 +105,13 @@ class Sentence():
         """
         Returns the set of all cells in self.cells known to be mines.
         """
-        return self.mines
+        return self.cells if len(self.cells) == self.count else set()
 
     def known_safes(self):
         """
         Returns the set of all cells in self.cells known to be safe.
         """
-        return self.safes
+        return self.cells if self.count == 0 else set()
 
     def mark_mine(self, cell):
         """
@@ -121,7 +119,6 @@ class Sentence():
         a cell is known to be a mine.
         """
         if cell in self.cells:
-            self.mines.add(cell)
             self.cells.remove(cell)
             self.count -= 1
             
@@ -131,7 +128,6 @@ class Sentence():
         a cell is known to be safe.
         """
         if cell in self.cells:
-            self.safes.add(cell)
             self.cells.remove(cell)
 
 
@@ -190,19 +186,16 @@ class MinesweeperAI():
 
                     cells.append(neighbor)
 
-        if len(cells) > 0:
-            s = Sentence(cells, count)
+        s = Sentence(cells, count)
+        if s not in self.knowledge:
             self.knowledge.append(s)
 
     def resvole(self):
         safe_cells = set()
         mine_cells = set()
         for sentence in self.knowledge:
-            if sentence.count == 0:
-                safe_cells.update(sentence.cells)
-
-            if len(sentence.cells) == sentence.count:
-                mine_cells.update(sentence.cells)
+            safe_cells.update(sentence.known_safes())
+            mine_cells.update(sentence.known_mines())
 
         for cell in safe_cells:
             self.mark_safe(cell)
@@ -214,13 +207,10 @@ class MinesweeperAI():
 
     def derive(self):
         n = len(self.knowledge)
-        self.knowledge.sort(key=lambda x: x.count)
-
         sentences = []
-        for i in range(n):
-            for j in range(i + 1, n):
-                one, other = self.knowledge[i], self.knowledge[j]
-                if one.count > 0 and other.count - one.count > 0 and one.cells.issubset(other.cells):
+        for one in self.knowledge:
+            for other in self.knowledge:
+                if one != other and one.cells.issubset(other.cells):
                     s = Sentence(other.cells - one.cells, other.count - one.count)
                     if s not in self.knowledge:
                         sentences.append(s)
