@@ -1,5 +1,5 @@
 while true; do
-    read -p "run unit test ?" yn
+    read -p "run unit test [Y|N] ?" yn
     case $yn in
         [Yy]* ) xcodebuild -project learn_objc.xcodeproj -scheme unit_test test; break;;
         [Nn]* ) break;;
@@ -7,4 +7,14 @@ while true; do
     esac
 done
 
-xcodebuild -project learn_objc.xcodeproj -alltargets
+
+while true; do
+    read -p "build all target [Y|N] ?" yn
+    case $yn in
+        [Yy]* ) xcodebuild -project learn_objc.xcodeproj -alltargets; break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+

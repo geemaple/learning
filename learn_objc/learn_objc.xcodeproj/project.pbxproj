@@ -18,7 +18,7 @@
 		DC47643629695A0D005D1EDE /* ObjcBasicsTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642429695A0D005D1EDE /* ObjcBasicsTesting.m */; };
 		DC47643729695A0D005D1EDE /* RuntimeWarmUps.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC47642529695A0D005D1EDE /* RuntimeWarmUps.mm */; };
 		DC47643829695A0D005D1EDE /* ARCTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642629695A0D005D1EDE /* ARCTesting.m */; };
-		DC47643929695A0D005D1EDE /* MessagingWarmUps.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642729695A0D005D1EDE /* MessagingWarmUps.m */; };
+		DC47643929695A0D005D1EDE /* MsgSend.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642729695A0D005D1EDE /* MsgSend.m */; };
 		DC47643A29695A0D005D1EDE /* ObjcWarmUpsTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642829695A0D005D1EDE /* ObjcWarmUpsTesting.m */; };
 		DC47643B29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642B29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.m */; };
 		DC47643C29695A0D005D1EDE /* ExistingMultiFileClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642C29695A0D005D1EDE /* ExistingMultiFileClass.m */; };
@@ -87,7 +87,7 @@
 		DC47642429695A0D005D1EDE /* ObjcBasicsTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcBasicsTesting.m; sourceTree = "<group>"; };
 		DC47642529695A0D005D1EDE /* RuntimeWarmUps.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RuntimeWarmUps.mm; sourceTree = "<group>"; };
 		DC47642629695A0D005D1EDE /* ARCTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCTesting.m; sourceTree = "<group>"; };
-		DC47642729695A0D005D1EDE /* MessagingWarmUps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagingWarmUps.m; sourceTree = "<group>"; };
+		DC47642729695A0D005D1EDE /* MsgSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgSend.m; sourceTree = "<group>"; };
 		DC47642829695A0D005D1EDE /* ObjcWarmUpsTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcWarmUpsTesting.m; sourceTree = "<group>"; };
 		DC47642A29695A0D005D1EDE /* ExistingMultiFileClass+TestingTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExistingMultiFileClass+TestingTwo.h"; sourceTree = "<group>"; };
 		DC47642B29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExistingMultiFileClass+TestingOne.m"; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 				DC47642929695A0D005D1EDE /* Category */,
 				DC47642029695A0D005D1EDE /* CategoryWarmUps.m */,
 				DC47642329695A0D005D1EDE /* GCDWarmUps.m */,
-				DC47642729695A0D005D1EDE /* MessagingWarmUps.m */,
+				DC47642729695A0D005D1EDE /* MsgSend.m */,
 				DC47642229695A0D005D1EDE /* MRCTesting.m */,
 				DC47642429695A0D005D1EDE /* ObjcBasicsTesting.m */,
 				DC47642829695A0D005D1EDE /* ObjcWarmUpsTesting.m */,
@@ -475,7 +475,7 @@
 			files = (
 				DC47643729695A0D005D1EDE /* RuntimeWarmUps.mm in Sources */,
 				DC47643529695A0D005D1EDE /* GCDWarmUps.m in Sources */,
-				DC47643929695A0D005D1EDE /* MessagingWarmUps.m in Sources */,
+				DC47643929695A0D005D1EDE /* MsgSend.m in Sources */,
 				DC47643129695A0D005D1EDE /* SizingWarmUps.mm in Sources */,
 				DC47643329695A0D005D1EDE /* UndefinedWarmUps.m in Sources */,
 				DC47646529695EDE005D1EDE /* JoinPthreadTesting.m in Sources */,
