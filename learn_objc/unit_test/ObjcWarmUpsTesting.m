@@ -2,8 +2,8 @@
 //  ObjcWarmUpsTesting.m
 //  ObjcWarmUpsTesting
 //
-//  Created by Dean Ji on 12/28/20.
-//  Copyright © 2020 dean. All rights reserved.
+//  Created by Felix Ji on 12/28/20.
+//  Copyright © 2020 Felix. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

@@ -2,9 +2,9 @@
 //  SizingWarmUps.m
 //  ObjcWarmUpsTests
 //
-//  Created by dean on 9/7/17.
+//  Created by Felix on 9/7/17.
 //  https://developer.apple.com/library/content/documentation/General/Conceptual/CocoaTouch64BitGuide/Major64-BitChanges/Major64-BitChanges.html#//apple_ref/doc/uid/TP40013501-CH2-SW1
-//  Copyright © 2017 dean. All rights reserved.
+//  Copyright © 2017 Felix. All rights reserved.
 //
 
 

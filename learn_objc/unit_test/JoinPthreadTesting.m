@@ -2,7 +2,7 @@
 //  JoinPthreadTesting.m
 //  JoinPthreadTesting
 //
-//  Created by Dean Ji on 12/26/20.
+//  Created by Felix Ji on 12/26/20.
 //
 
 #import <XCTest/XCTest.h>

@@ -2,12 +2,12 @@
 //  RuntimeWarmUps.m
 //  ObjcWarmUpsTests
 //
-//  Created by dean on 9/6/17.
-//  Copyright © 2017 dean. All rights reserved.
+//  Created by Felix on 9/6/17.
+//  Copyright © 2017 Felix. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "CatAnimal.h"
+#import "Animal.h"
 
 struct mogoal_class{
     mogoal_class *isa;
@@ -52,7 +52,7 @@ typedef struct mogoal_object *custom_id; //对象的定义
 
 - (void)testSelfAndSuper {
     NSLog(@"==== start ====");
-    PrisonCat *cat = [PrisonCat new];
+    Tiger *cat = [Tiger new];
     NSLog(@"==== end ====");
 }
 

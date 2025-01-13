@@ -18,19 +18,22 @@
 		DC47643629695A0D005D1EDE /* ObjcBasicsTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642429695A0D005D1EDE /* ObjcBasicsTesting.m */; };
 		DC47643729695A0D005D1EDE /* RuntimeWarmUps.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC47642529695A0D005D1EDE /* RuntimeWarmUps.mm */; };
 		DC47643829695A0D005D1EDE /* ARCTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642629695A0D005D1EDE /* ARCTesting.m */; };
-		DC47643929695A0D005D1EDE /* MsgSend.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642729695A0D005D1EDE /* MsgSend.m */; };
+		DC47643929695A0D005D1EDE /* MsgSendTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642729695A0D005D1EDE /* MsgSendTesting.m */; };
 		DC47643A29695A0D005D1EDE /* ObjcWarmUpsTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642829695A0D005D1EDE /* ObjcWarmUpsTesting.m */; };
 		DC47643B29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642B29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.m */; };
 		DC47643C29695A0D005D1EDE /* ExistingMultiFileClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642C29695A0D005D1EDE /* ExistingMultiFileClass.m */; };
 		DC47643D29695A0D005D1EDE /* ExistingMultiFileClass+TestingTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47642D29695A0D005D1EDE /* ExistingMultiFileClass+TestingTwo.m */; };
-		DC47644929695BF3005D1EDE /* CatAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47644729695BF3005D1EDE /* CatAnimal.m */; };
-		DC47644A29695BF3005D1EDE /* CatAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47644729695BF3005D1EDE /* CatAnimal.m */; };
+		DC47644929695BF3005D1EDE /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47644729695BF3005D1EDE /* Animal.m */; };
+		DC47644A29695BF3005D1EDE /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47644729695BF3005D1EDE /* Animal.m */; };
 		DC47645329695E5B005D1EDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47645229695E5B005D1EDE /* main.m */; };
 		DC47646529695EDE005D1EDE /* JoinPthreadTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47646129695EDE005D1EDE /* JoinPthreadTesting.m */; };
 		DC47646629695EDE005D1EDE /* JoinSemaphoreTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47646229695EDE005D1EDE /* JoinSemaphoreTesting.m */; };
 		DC47646729695EDE005D1EDE /* ProducerAndConsumerSemaphoreTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47646329695EDE005D1EDE /* ProducerAndConsumerSemaphoreTesting.m */; };
 		DC47646829695EDE005D1EDE /* ProducerAndConsumerTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47646429695EDE005D1EDE /* ProducerAndConsumerTesting.m */; };
 		DC47647029695F29005D1EDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47646F29695F29005D1EDE /* main.m */; };
+		DC63F0392D350EB60064CE1E /* tool.m in Sources */ = {isa = PBXBuildFile; fileRef = DC63F0382D350EB40064CE1E /* tool.m */; };
+		DC63F03A2D350EB60064CE1E /* tool.m in Sources */ = {isa = PBXBuildFile; fileRef = DC63F0382D350EB40064CE1E /* tool.m */; };
+		DC63F0422D3528370064CE1E /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = DC63F0412D3528370064CE1E /* Human.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,7 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DC4763EE296951FB005D1EDE /* class_object */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = class_object; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC4763EE296951FB005D1EDE /* object */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = object; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4763F0296951FB005D1EDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DC47640029695564005D1EDE /* block */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = block; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC47640229695564005D1EDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,7 +90,7 @@
 		DC47642429695A0D005D1EDE /* ObjcBasicsTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcBasicsTesting.m; sourceTree = "<group>"; };
 		DC47642529695A0D005D1EDE /* RuntimeWarmUps.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RuntimeWarmUps.mm; sourceTree = "<group>"; };
 		DC47642629695A0D005D1EDE /* ARCTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCTesting.m; sourceTree = "<group>"; };
-		DC47642729695A0D005D1EDE /* MsgSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgSend.m; sourceTree = "<group>"; };
+		DC47642729695A0D005D1EDE /* MsgSendTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgSendTesting.m; sourceTree = "<group>"; };
 		DC47642829695A0D005D1EDE /* ObjcWarmUpsTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcWarmUpsTesting.m; sourceTree = "<group>"; };
 		DC47642A29695A0D005D1EDE /* ExistingMultiFileClass+TestingTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExistingMultiFileClass+TestingTwo.h"; sourceTree = "<group>"; };
 		DC47642B29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExistingMultiFileClass+TestingOne.m"; sourceTree = "<group>"; };
@@ -95,8 +98,8 @@
 		DC47642D29695A0D005D1EDE /* ExistingMultiFileClass+TestingTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ExistingMultiFileClass+TestingTwo.m"; sourceTree = "<group>"; };
 		DC47642E29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ExistingMultiFileClass+TestingOne.h"; sourceTree = "<group>"; };
 		DC47642F29695A0D005D1EDE /* ExistingMultiFileClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExistingMultiFileClass.h; sourceTree = "<group>"; };
-		DC47644729695BF3005D1EDE /* CatAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatAnimal.m; sourceTree = "<group>"; };
-		DC47644829695BF3005D1EDE /* CatAnimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatAnimal.h; sourceTree = "<group>"; };
+		DC47644729695BF3005D1EDE /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		DC47644829695BF3005D1EDE /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
 		DC47645029695E5B005D1EDE /* gcd */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gcd; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC47645229695E5B005D1EDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DC47646129695EDE005D1EDE /* JoinPthreadTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinPthreadTesting.m; sourceTree = "<group>"; };
@@ -105,6 +108,11 @@
 		DC47646429695EDE005D1EDE /* ProducerAndConsumerTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProducerAndConsumerTesting.m; sourceTree = "<group>"; };
 		DC47646D29695F29005D1EDE /* file */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = file; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC47646F29695F29005D1EDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC63F0362D350BC10064CE1E /* clang_rewrite_main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = clang_rewrite_main.cpp; sourceTree = "<group>"; };
+		DC63F0372D350EAA0064CE1E /* tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tool.h; sourceTree = "<group>"; };
+		DC63F0382D350EB40064CE1E /* tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tool.m; sourceTree = "<group>"; };
+		DC63F0402D3528370064CE1E /* Human.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
+		DC63F0412D3528370064CE1E /* Human.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Human.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				DC47644629695BF3005D1EDE /* shared */,
-				DC4763EF296951FB005D1EDE /* class_object */,
+				DC4763EF296951FB005D1EDE /* object */,
 				DC47640129695564005D1EDE /* block */,
 				DC4764182969594C005D1EDE /* unit_test */,
 				DC47645129695E5B005D1EDE /* gcd */,
@@ -162,7 +170,7 @@
 		DC4763E12969519D005D1EDE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC4763EE296951FB005D1EDE /* class_object */,
+				DC4763EE296951FB005D1EDE /* object */,
 				DC47640029695564005D1EDE /* block */,
 				DC4764172969594C005D1EDE /* unit_test.xctest */,
 				DC47645029695E5B005D1EDE /* gcd */,
@@ -171,12 +179,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DC4763EF296951FB005D1EDE /* class_object */ = {
+		DC4763EF296951FB005D1EDE /* object */ = {
 			isa = PBXGroup;
 			children = (
+				DC63F0362D350BC10064CE1E /* clang_rewrite_main.cpp */,
 				DC4763F0296951FB005D1EDE /* main.m */,
 			);
-			path = class_object;
+			path = object;
 			sourceTree = "<group>";
 		};
 		DC47640129695564005D1EDE /* block */ = {
@@ -190,6 +199,7 @@
 		DC4764182969594C005D1EDE /* unit_test */ = {
 			isa = PBXGroup;
 			children = (
+				DC63F03F2D3528100064CE1E /* objc_msgSend */,
 				DC47646129695EDE005D1EDE /* JoinPthreadTesting.m */,
 				DC47646229695EDE005D1EDE /* JoinSemaphoreTesting.m */,
 				DC47646329695EDE005D1EDE /* ProducerAndConsumerSemaphoreTesting.m */,
@@ -199,7 +209,6 @@
 				DC47642929695A0D005D1EDE /* Category */,
 				DC47642029695A0D005D1EDE /* CategoryWarmUps.m */,
 				DC47642329695A0D005D1EDE /* GCDWarmUps.m */,
-				DC47642729695A0D005D1EDE /* MsgSend.m */,
 				DC47642229695A0D005D1EDE /* MRCTesting.m */,
 				DC47642429695A0D005D1EDE /* ObjcBasicsTesting.m */,
 				DC47642829695A0D005D1EDE /* ObjcWarmUpsTesting.m */,
@@ -226,8 +235,10 @@
 		DC47644629695BF3005D1EDE /* shared */ = {
 			isa = PBXGroup;
 			children = (
-				DC47644729695BF3005D1EDE /* CatAnimal.m */,
-				DC47644829695BF3005D1EDE /* CatAnimal.h */,
+				DC63F0382D350EB40064CE1E /* tool.m */,
+				DC63F0372D350EAA0064CE1E /* tool.h */,
+				DC47644729695BF3005D1EDE /* Animal.m */,
+				DC47644829695BF3005D1EDE /* Animal.h */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -248,12 +259,22 @@
 			path = file;
 			sourceTree = "<group>";
 		};
+		DC63F03F2D3528100064CE1E /* objc_msgSend */ = {
+			isa = PBXGroup;
+			children = (
+				DC47642729695A0D005D1EDE /* MsgSendTesting.m */,
+				DC63F0402D3528370064CE1E /* Human.h */,
+				DC63F0412D3528370064CE1E /* Human.m */,
+			);
+			path = objc_msgSend;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DC4763ED296951FB005D1EDE /* class_object */ = {
+		DC4763ED296951FB005D1EDE /* object */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC4763F2296951FB005D1EDE /* Build configuration list for PBXNativeTarget "class_object" */;
+			buildConfigurationList = DC4763F2296951FB005D1EDE /* Build configuration list for PBXNativeTarget "object" */;
 			buildPhases = (
 				DC4763EA296951FB005D1EDE /* Sources */,
 				DC4763EB296951FB005D1EDE /* Frameworks */,
@@ -264,9 +285,9 @@
 			);
 			dependencies = (
 			);
-			name = class_object;
+			name = object;
 			productName = class_object;
-			productReference = DC4763EE296951FB005D1EDE /* class_object */;
+			productReference = DC4763EE296951FB005D1EDE /* object */;
 			productType = "com.apple.product-type.tool";
 		};
 		DC4763FF29695564005D1EDE /* block */ = {
@@ -379,7 +400,7 @@
 			projectRoot = "";
 			targets = (
 				DC4764162969594C005D1EDE /* unit_test */,
-				DC4763ED296951FB005D1EDE /* class_object */,
+				DC4763ED296951FB005D1EDE /* object */,
 				DC4763FF29695564005D1EDE /* block */,
 				DC47644F29695E5B005D1EDE /* gcd */,
 				DC47646C29695F29005D1EDE /* file */,
@@ -413,7 +434,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -f $SRCROOT/class_object/clang_rewrite_main.cpp ]; then\necho \"file exists skip clang rewrite\"\nelse\nclang -rewrite-objc -I$SRCROOT/shared $SRCROOT/class_object/main.m -o $SRCROOT/class_object/clang_rewrite_main.cpp\nfi\n";
+			shellScript = "clang -rewrite-objc -I$SRCROOT/shared $SRCROOT/object/main.m -o $SRCROOT/object/clang_rewrite_main.cpp\n\n";
 		};
 		DC476407296956D8005D1EDE /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -456,8 +477,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC47644929695BF3005D1EDE /* CatAnimal.m in Sources */,
+				DC47644929695BF3005D1EDE /* Animal.m in Sources */,
 				DC4763F1296951FB005D1EDE /* main.m in Sources */,
+				DC63F0392D350EB60064CE1E /* tool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,11 +497,11 @@
 			files = (
 				DC47643729695A0D005D1EDE /* RuntimeWarmUps.mm in Sources */,
 				DC47643529695A0D005D1EDE /* GCDWarmUps.m in Sources */,
-				DC47643929695A0D005D1EDE /* MsgSend.m in Sources */,
+				DC47643929695A0D005D1EDE /* MsgSendTesting.m in Sources */,
 				DC47643129695A0D005D1EDE /* SizingWarmUps.mm in Sources */,
 				DC47643329695A0D005D1EDE /* UndefinedWarmUps.m in Sources */,
 				DC47646529695EDE005D1EDE /* JoinPthreadTesting.m in Sources */,
-				DC47644A29695BF3005D1EDE /* CatAnimal.m in Sources */,
+				DC47644A29695BF3005D1EDE /* Animal.m in Sources */,
 				DC47643C29695A0D005D1EDE /* ExistingMultiFileClass.m in Sources */,
 				DC47646629695EDE005D1EDE /* JoinSemaphoreTesting.m in Sources */,
 				DC47643229695A0D005D1EDE /* CategoryWarmUps.m in Sources */,
@@ -488,6 +510,8 @@
 				DC47643829695A0D005D1EDE /* ARCTesting.m in Sources */,
 				DC47646729695EDE005D1EDE /* ProducerAndConsumerSemaphoreTesting.m in Sources */,
 				DC47646829695EDE005D1EDE /* ProducerAndConsumerTesting.m in Sources */,
+				DC63F03A2D350EB60064CE1E /* tool.m in Sources */,
+				DC63F0422D3528370064CE1E /* Human.m in Sources */,
 				DC47643B29695A0D005D1EDE /* ExistingMultiFileClass+TestingOne.m in Sources */,
 				DC47643029695A0D005D1EDE /* BlockWarmUps.mm in Sources */,
 				DC47643429695A0D005D1EDE /* MRCTesting.m in Sources */,
@@ -725,7 +749,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC4763F2296951FB005D1EDE /* Build configuration list for PBXNativeTarget "class_object" */ = {
+		DC4763F2296951FB005D1EDE /* Build configuration list for PBXNativeTarget "object" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC4763F3296951FB005D1EDE /* Debug */,
