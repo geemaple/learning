@@ -9,10 +9,13 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
-@interface HumanAddMethod: NSObject
+@interface Human: NSObject
 - (NSString *)say:(NSString *)content;
 @end
 
+@interface HumanAddMethod: NSObject
+- (NSString *)say:(NSString *)content;
+@end
 
 @interface HumanFakeResolve: NSObject
 - (NSString *)say:(NSString *)content;

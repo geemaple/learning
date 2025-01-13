@@ -8,13 +8,17 @@
 #import "Human.h"
 #import <objc/runtime.h>
 
+@implementation Human: NSObject
+- (NSString *)say:(NSString *)content {
+    return [NSString stringWithFormat:@"%@", content];
+}
+@end
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
-//MARK: -
-
-NSString * say(id self, SEL selector, NSString *msg){
-    return [NSString stringWithFormat:@"%@", msg];
+NSString * say(id self, SEL selector, NSString *content){
+    return [NSString stringWithFormat:@"%@", content];
 }
 
 @implementation HumanAddMethod
@@ -95,14 +99,17 @@ NSString * say(id self, SEL selector, NSString *msg){
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector{
-    if ([_surrogate respondsToSelector:aSelector]) {
+    NSLog(@"💚 3. methodSignatureForSelector called %@", NSStringFromSelector(aSelector));
+    NSMethodSignature *signature = [super methodSignatureForSelector:aSelector];
+    if (!signature) {
         return [_surrogate methodSignatureForSelector:aSelector];
-    } else {
-        return [super methodSignatureForSelector:aSelector];
     }
+
+    return signature;
 }
 
 - (void)forwardInvocation:(NSInvocation *)anInvocation{
+    NSLog(@"💚 3. forwardInvocation called %@", [anInvocation description]);
     if ([_surrogate respondsToSelector: [anInvocation selector]]){
         [anInvocation invokeWithTarget:_surrogate];
     }
