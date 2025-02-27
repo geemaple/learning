@@ -61,6 +61,12 @@
     XCTAssertTrue([[instance say:@"Hello"] containsString:@"Meow"]);
 }
 
+- (void)testMsgSend {
+    Human *instance = [[Human alloc] init];
+    NSString *result = ((NSString *(*)(id, SEL, NSString *))objc_msgSend)(instance, @selector(say:), @"Hello");
+    XCTAssertTrue([result isEqualToString:@"Hello"]);
+}
+
 - (void)testMethodInvoke{
     
     Human *instance = [[Human alloc] init];
@@ -68,13 +74,13 @@
     
     uint64_t start = mach_absolute_time();
     
-    NSString * result1 = ((NSString*(*)(id, Method, NSString*))method_invoke)(instance, method, @"Hello");
+    NSString * result = ((NSString*(*)(id, Method, NSString*))method_invoke)(instance, method, @"Hello");
     NSLog(@"invoke = %llul", mach_absolute_time() - start);
-    XCTAssertTrue([result1 isEqualToString:@"Hello"]);
+    XCTAssertTrue([result isEqualToString:@"Hello"]);
     
     [self measureBlock:^{
         for (int i = 0; i < self.times; i++) {
-            NSString *result2 __attribute__((unused)) = ((NSString*(*)(id, Method, NSString*))method_invoke)(instance, method, @"Hello");
+            NSString *result __attribute__((unused)) = ((NSString*(*)(id, Method, NSString*))method_invoke)(instance, method, @"Hello");
         }
     }];
 }
@@ -88,15 +94,15 @@
     
     NSString *(*function)(id, SEL, NSString *) = (NSString *(*)(id, SEL, NSString *))method_getImplementation(method);
     SEL selecor = method_getName(method);
-    NSString * result2 = function(instance, selecor, @"Hello");
+    NSString * result = function(instance, selecor, @"Hello");
     NSLog(@"iml&sel = %llul", mach_absolute_time() - start);
     
-    XCTAssertTrue([result2 isEqualToString:@"Hello"]);
+    XCTAssertTrue([result isEqualToString:@"Hello"]);
     [self measureBlock:^{
         for (int i = 0; i < self.times; i++) {
             NSString *(*function)(id, SEL, NSString *) = (NSString *(*)(id, SEL, NSString *))method_getImplementation(method);
             SEL selecor = method_getName(method);
-            NSString *result2 __attribute__((unused)) = function(instance, selecor, @"Hello");
+            NSString *result __attribute__((unused)) = function(instance, selecor, @"Hello");
         }
     }];
 }

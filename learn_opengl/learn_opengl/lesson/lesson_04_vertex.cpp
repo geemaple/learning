@@ -88,9 +88,8 @@ int Lesson04::entry(void) {
     glEnableVertexAttribArray(0);
     glEnableVertexAttribArray(1);
 
-    glBindVertexArray(0);
+    glBindVertexArray(0); // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens
     glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
         
     GLenum types[] = {GL_VERTEX_SHADER, GL_FRAGMENT_SHADER};
     const GLchar* codes[] = {vertexShaderSource, fragmentShaderSource};
