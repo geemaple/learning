@@ -116,7 +116,7 @@ int Lesson07::entry(void) {
     glUniform1i(glGetUniformLocation(shaderProgram, "texture2"), 1);
     
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-//    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_DEPTH_TEST);
     // render loop, each iteration is called a frame
     while(!glfwWindowShouldClose(window))
     {

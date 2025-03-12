@@ -74,7 +74,7 @@ int Lesson14::entry(void) {
         glm::vec3(1.2f, 1.0f, 2.0f),
     };
     
-    GLuint VBO, VAO, EBO, Maps[3];
+    GLuint VBO, VAO, EBO, Maps[2];
     // create
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -99,7 +99,7 @@ int Lesson14::entry(void) {
     GLenum types[] = {GL_VERTEX_SHADER, GL_FRAGMENT_SHADER};
 //    const char* shader_paths[] = {"lesson_14_vertex.glsl", "lesson_14_frament_directional.glsl"};
     const char* shader_paths[] = {"lesson_14_vertex.glsl", "lesson_14_frament_point.glsl"};
-    
+
     GLuint shaderProgram = shaderProgramFromFile(types, shader_paths, 2);
     
     const char* lighting_paths[] = {"lighting_vertex.glsl", "lighting_fragment.glsl"};
